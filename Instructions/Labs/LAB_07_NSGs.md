@@ -54,7 +54,7 @@ In this task, you will create a virtual network to use with the network and appl
     |Name|**myVirtualNetwork**|
     |Region|**East US**|
 
-1. On the **IP addresses** tab of the **Create virtual network** blade, set the **IPv4 address space** to **10.0.0.0/16**, and, if needed, in the **Subnet name** column, click **default**, on the **Edit subnet** blade, specify the following settings and click **Save**:
+1. On the **IP addresses** tab of the **Create virtual network** blade, set the **IPv4 address space** to **10.0.0.0/16**, and, if needed, in the **Subnet name** column, click **+Add subnet**, on the **Add subnet** blade, specify the following settings and click **Add**:
 
     |Setting|Value|
     |---|---|
@@ -190,7 +190,7 @@ In this task, you will create a virtual machine to use as a web server.
    |Resource group|**AZ500LAB07**|
    |Virtual machine name|**myVmWeb**|
    |Region|**(US)East US**|
-   |Image|**Windows Server 2019 Datacenter - Gen 2**|
+   |Image|**Windows Server 2022 Datacenter: Azure Edition- Gen2**|
    |Size|**Standard D2s v3**|
    |Username|**Student**|
    |Password|**Pa55w.rd1234**|
