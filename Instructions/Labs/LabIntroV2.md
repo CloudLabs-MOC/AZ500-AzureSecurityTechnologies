@@ -6,7 +6,7 @@ Welcome to your Cloud Native Apps with Azure Services! We've prepared a seamless
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../images/labguide.png)
+![Access Your VM and Lab Guide](../images/SS0.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -16,29 +16,25 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment Details** tab.
  
-![Explore Lab Resources](../images/env.png)
+![Explore Lab Resources](../images/SS1.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../images/spl.png)
+![Use the Split Window Feature](../images/SS2.png)
  
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../images/res.png)
+![Manage Your Virtual Machine](../images/SS3.png)
 
 ## Lab Validation
 
 1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
    ![Inline Validation](../images/inline-validation.png)
-
-1. You can also validate the task by navigating to the **Lab Validation** tab, from the upper right corner in the lab guide section.
-
-   ![Lab Validation](../images/lab-validation.png)
 
 1. If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
