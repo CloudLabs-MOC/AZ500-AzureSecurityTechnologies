@@ -70,7 +70,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-   ![Inline Validation](../images/inline-validation.png)
+   ![Inline Validation](../images/SS0v.png)
 
 1. If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
