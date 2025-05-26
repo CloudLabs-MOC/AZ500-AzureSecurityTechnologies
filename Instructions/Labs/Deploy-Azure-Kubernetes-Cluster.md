@@ -307,11 +307,11 @@ In this exercise, we deploy an application to an AKS cluster using a Kubernetes 
             - containerPort: 3002
             resources:
               requests:
-                cpu: 1m
-                memory: 1Mi
+                cpu: 10m
+                memory: 64Mi
               limits:
-                cpu: 1m
-                memory: 7Mi
+                cpu: 100m
+                memory: 128Mi
     ---
     apiVersion: v1
     kind: Service
