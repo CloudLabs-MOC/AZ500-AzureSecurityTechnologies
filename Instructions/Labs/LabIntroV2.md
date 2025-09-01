@@ -16,27 +16,33 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../images/AZ500(2).png)
+![Explore Lab Resources](../images/envtab(1).png)
+
+## Lab Progress
+
+You can use the Progress tab to track your progress while working on the lab. A score will be provided after successful validation.
+
+![lab Progress](../images/progresstab.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../images/AZ500(3).png)
+![Use the Split Window Feature](../images/splitwin(1).png)
 
 ## Utilizing the Zoom In/Out Feature
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-![Use the Split Window Feature](../images/AZ500(5).png)
+![Use the Split Window Feature](../images/zoominout(1).png)
  
 ## Managing Your Virtual Machine
  
 Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../images/AZ500(4).png)
+![Manage Your Virtual Machine](../images/resourcetab(1).png)
 
-## **Lab Duration Extension**
+## Lab Duration Extension
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
 
@@ -77,6 +83,8 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
     ![](../images/AZ-500-staysignedin.png)
  
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+
+   ![](../images/welcomeazure(1).png)
 
 ## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
 
