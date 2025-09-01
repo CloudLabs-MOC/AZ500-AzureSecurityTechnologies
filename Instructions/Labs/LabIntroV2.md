@@ -92,6 +92,8 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
 
 1. On the **"Keep your account secure"** page, select **Next** twice.
 
+   ![image](../images/keep-account-secure.png)
+
 1. **Note:** If you don’t have the Microsoft Authenticator app installed on your mobile device:
 
    - Open **Google Play Store** (Android) or **App Store** (iOS).
@@ -100,15 +102,29 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
 
 1. A **QR code** will be displayed on your computer screen.
 
+   ![image](../images/qr-code.png)
+
 1. In the Authenticator app, select **Scan a QR code** and scan the code displayed on your screen.
 
 1. After scanning, click **Next** to proceed.
 
+   ![image](../images/qr-code-1.png)
+
 1. On your phone, enter the number shown on your computer screen in the Authenticator app and select **Next**.
+
+   ![image](../images/auth-number.png)
+
+1. Once the authentication setup is completed, click on **Done**.
+
+   ![image](../images/click-done.png)
        
-1. If prompted to stay signed in, you can click "No."
- 
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
+1. If prompted to stay signed in, you can click **No**
+
+   ![](../images/AZ-500-staysignedin.png)
+
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+
+    ![](../images/welcomeazure(1).png)
 
 ## Support Contact
 
