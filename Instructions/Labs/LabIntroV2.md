@@ -88,7 +88,9 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
 
 ## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
 
-1. At the **"More information required"** prompt, select **Next**.
+1. At the **"Let's keep your account secure"** prompt, select **Next**.
+
+   ![image](../images/mfa-1.png)
 
 1. On the **"Keep your account secure"** page, select **Next** twice.
 
