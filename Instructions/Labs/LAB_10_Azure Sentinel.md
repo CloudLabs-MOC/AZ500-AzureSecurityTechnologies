@@ -315,17 +315,43 @@ In this task, you will create a playbook. A security playbook is a collection of
 
     ![image](../images/AZ-500l10-22.png)
 
+1. In the **Microsoft Sentinel** section, expand **Configuration (1)** select **Automation (2)**, click **Create (3)** and choose **Playbook with alert trigger (4)** from dropdown list.
+
+    ![image](../images/br3.png)
+
+1. On the basics tab, provide the following details:
+
+    - Resource group: **AZ500LAB080910 (1)**
+    - Playbook name: Enter **Change-Incident-Severity (2)**
+    - Enable diagonstic logs in Logs Analytics **(3)**
+    - Select **Next:Connections (4)**
+
+      ![image](../images/br4.png)  
+
+1. Expand **Microsoft Sentinal (1)** and select **<inject key="AzureAdUserEmail"></inject> (2)** and then click **Next: Review and create (3)**.
+
+    ![image](../images/br5.png)
+
+1. Select **Create playbook**.
+
+    ![image](../images/br6.png)
+
+1. Navigate back to **Automation** page.    
+
 1. In the **Microsoft Sentinel** section, expand **Configuration (1)** select **Automation (2)**, click **Create (3)** and choose **Automation Rule (4)** from dropdown list.
 
     ![image](../images/AZ-500l10-23.png)
 
-1. In the **Create new automation rule** window, enter **Run Change-Severity Playbook** for the **Automation rule name** under the **Trigger** field, click the drop-down menu and select **When alert is created**.
+1. On new automation rule page,
 
-1. In the **Create new automation rule** window, under Actions, read the note and then click **Manage playbook permissions**. On the **Manage permissions** window, select the checkbox next to the resource group **AZ500LAB080910** and then click Apply.
+    - Automation rule name: Enter **Run Change-Severity Playbook (1)**
+    - Under the **Trigger** field, click the drop-down menu and select **When alert is created (2)**
+    - Select **Change-Incident-Severity (3)** playbook from the drop down
+    - Select **Apply (4)**
 
-1. In the **Create new automation rule** window, under **Actions**, click the second drop-down menu and select the **Change-Incident-Severity** logic app. On the **Create new automation rule** window, click **Apply**.
+      ![image](../images/br7.png)
 
->**Note**: You now have a new active rule called **Playbook Demo**. If an event identified by the rue logic occurs, it will result in a medium severity alert, which will generate a corresponding incident.
+>**Note**: You now have a new active rule called **Playbook Demo**. If an event identified by the rue logic occurs, it will result in a medium severity alert, which will generate a corresponding incident.      
 
 ## Task 6: Invoke an incident and review the associated actions.
 
@@ -333,35 +359,41 @@ In this task, you will create a playbook. A security playbook is a collection of
 
     >**Note**: Check your secure score. By now it should have updated.
 
-1. On the **Microsoft Defender for Cloud \| Overview** blade, under **Cloud Security** select **Workload protections** section.
+1. On the **Microsoft Defender for Cloud \| Overview** blade, under **Cloud Security** select **Workload protections (1)** section.
 
-1. On the **Microsoft Defender for Cloud \| Workload protections** blade under **Advanced protection** select **Just-in-time VM access**.
+    - On the **Microsoft Defender for Cloud \| Workload protections** blade under **Advanced protection** select **Just-in-time VM access (2)**.
 
-1. On the **Just in time VM access** blade, under the **Configured** blade, on the right hand side of the row referencing the **myVM** virtual machine, click the ***ellipsis (...)** button,  click **Remove** and then click **Yes**.
+      ![image](../images/br8.png)    
 
-   >**Note:** If the VM is not listed in the **Just-in-time VMs**, navigate to **Virutal Machine** blade and click the **Configuration**, Click the **Enable the Just-in-time VMs** option under the **Just-in-time Vm's access**. Repeat the above step to navigate back to the **Microsoft Defender for Cloud** and refresh the page, the VM will appear.
+1. On the **Just in time VM access** blade, under the **Configured (1)** blade, on the right hand side of the row referencing the **myVM** virtual machine, click the ***ellipsis (...) (2)** button,  click **Remove (3)**. 
+
+    ![image](../images/br9.png)
+
+1. Then click **Yes**.
+
+    ![image](../images/br10.png)
+
+     >**Note:** If the VM is not listed in the **Just-in-time VMs**, navigate to **Virutal Machine** blade and click the **Configuration**, Click the **Enable the Just-in-time VMs** option under the **Just-in-time Vm's access**. Repeat the above step to navigate back to the **Microsoft Defender for Cloud** and refresh the page, the VM will appear.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Activity log** and press the **Enter** key.
 
-1. On the **Activity log** blade, note an **Delete JIT Network Access Policies** entry. 
+1. On the **Activity log** blade, note an **Delete JIT Network Access Policies** entry.   This may take a few minutes to appear. **Refresh** the page if it does not appear. You can also try to search for the entry in Activity logs. 
 
-    >**Note**: This may take a few minutes to appear. **Refresh** the page if it does not appear. You can also try to search for the entry in Activity logs. 
+    ![image](../images/br11.png)
     
-1. In the Azure portal, navigate back to the **Microsoft Sentinel \| Overview** blade.
+1. Navigate back to the **Microsoft Defender** portal.
 
-1. On the **Microsoft Sentinel \| Overview** blade, review the dashboard and verify that it displays an alert corresponding to the deletion of the Just in time VM access policy.
+1. Expand **Investigation and response (1)**, then **Incidents and alerts (2)**. Choose **Alerts (3)** and then review the dashboard and verify that it displays an alert corresponding to the deletion of the Just in time VM access policy **(4)**.
 
-    >**Note**: It can take up to 5 minutes for alerts to appear on the **Microsoft Sentinel \| Overview** blade. If you are not seeing an alert at that point, run the query rule referenced in the previous task to verify that the Just In Time access policy deletion activity has been propagated to the Log Analytics workspace associated with your Microsoft Sentinel instance. If that is not the case, re-create the Just in time VM access policy and delete it again.
+    ![image](../images/br12.png)
 
-1. On the **Microsoft Sentinel \| Overview** blade, in the **Threat Management** section, click **Incidents**.
+     >**Note**: It can take up to 5 minutes for alerts to appear on the **alerts** blade. If you are not seeing an alert at that point, run the query rule referenced in the previous task to verify that the Just In Time access policy deletion activity has been propagated to the Log Analytics workspace associated with your Microsoft Sentinel instance. If that is not the case, re-create the Just in time VM access policy and delete it again.
 
-1. Verify that the blade displays an incident with either medium or high severity level.
+1. Select **Incidents (1)**. Verify that the blade displays an incident with either medium or high severity level **(2)**.
 
-   ![image](../images/L10T6S10-1112.png)
-   
-    >**Note**: It can take up to 5 minutes for the incident to appear on the **Microsoft Sentinel \| Incidents** blade. 
+    ![image](../images/br13.png)
 
-    >**Note**: Review the **Microsoft Sentinel \| Playbooks** blade. You will find there the count of successful and failed runs.
+     >**Note**: It can take up to 5 minutes for the incident to appear on the **Incident** blade. 
 
     >**Note**: You have the option of assigning a different severity level and status to an incident.
 
@@ -370,7 +402,7 @@ In this task, you will create a playbook. A security playbook is a collection of
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
    <validation step="61d471a2-0512-4d07-9e23-7393e56ef937" />
  

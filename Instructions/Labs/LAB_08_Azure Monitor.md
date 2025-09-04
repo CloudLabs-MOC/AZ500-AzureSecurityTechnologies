@@ -1,4 +1,4 @@
-# Lab 08: Azure Monitor
+# Lab 08: Create a Log Analytics Workspace, Azure Storage Account, and Data Collection Rule (DCR)
 
 ## Lab scenario
 You have been asked to create a proof of concept for monitoring virtual machine performance. Specifically, you want to:
@@ -62,13 +62,17 @@ In this exercise, you will complete the following tasks:
     |User name|**localadmin**|
     |Password|**Pa55w.rd1234**|
 
-    >**Note**: Wait for the deployment to complete. 
+    ![](../images/br14.png)
+
+     >**Note**: Wait for the deployment to complete. 
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to confirm that the virtual machine named **myVM** was created and its **ProvisioningState** is **Succeeded**.
 
     ```powershell
     Get-AzVM -Name 'myVM' -ResourceGroupName 'AZ500LAB080910' | Format-Table
     ```
+
+     ![](../images/br15.png)    
 
 1. Close the Cloud Shell pane. 
 
@@ -91,7 +95,7 @@ In this task, you will create a Log Analytics workspace.
     |Name| Enter **LogAnalytics<inject key="DeploymentID" enableCopy="false"/> (3)**|
     |Region|**(US) East US (4)**|
 
-    ![](../images/New-image112.png)
+    ![](../images/br17.png)
    
 1. On the **Review + create** tab of the **Create Log Analytics workspace** blade, click **Create**.
 
@@ -156,7 +160,7 @@ In this task, you will create a data collection rule.
 
 1. Click on the button labeled **Next: Collect and deliver >** to proceed.
 
-1. Click **+ Add data source (1)**, then on the **Add data source** page, change the **Data source type** drop-down menu to display **Performance Counters.** Leave the following default settings:
+1. Click **+ Add data source (1)**, then on the **Add data source** page, change the **Data source type** drop-down menu to display **Performance Counters (2).** Leave the following default settings **(3)** and click on the button labeled **Next: Destination > (4)** to proceed.
 
     |Setting|Value|
     |---|---|
@@ -166,11 +170,11 @@ In this task, you will create a data collection rule.
     |Disk|60|
     |Network|60|
 
-1. Click on the button labeled **Next: Destination >** to proceed.
-  
-1. Click on **+Add destination (2)**, change the **Destination type** drop-down menu to display **Azure Monitor Logs.** In the **Subscription** window, ensure that your *Subscription* is displayed, then change the **Destination details** drop-down menu to reflect your previously created Log Analytics Workspace **(3)**. Click on **Add data source (4)**. 
+     ![](../images/br18.png)    
 
-     ![](../images/New-image120.png)
+1. Click on **+Add destination (1)**, change the **Destination type** drop-down menu to display **Azure Monitor Logs (2).** In the **Subscription** window, ensure that your *Subscription* is displayed **(3)**, then change the **Destination details** drop-down menu to reflect your previously created Log Analytics Workspace **(4)**. Click on **Add data source (5)**. 
+
+     ![](../images/br19.png) 
 
 1. Click **Review + create.**
 
@@ -185,7 +189,7 @@ In this task, you will create a data collection rule.
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
    <validation step="2438c3db-e10e-4895-88cd-b6f1ffa433ca" />
 
