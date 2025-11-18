@@ -22,11 +22,11 @@ In this exercise, we set up an Azure Kubernetes Service (AKS) cluster via the Az
 
 1. In a new web browser window or tab, navigate to the Azure portal (``portal.azure.com``).
 
-2. On the Azure portal home page, select **+ Create a resource** **(1)**, in the search bar **Azure Kubernetes Service aks** **(2)** click enter, click on  **Create** **(3)** and select **Azure Kubernetes Service (AKS)** **(4)**.
+1. On the Azure portal home page, select **+ Create a resource** **(1)**, in the search bar **Azure Kubernetes Service aks** **(2)** click enter, click on  **Create** **(3)** and select **Azure Kubernetes Service (AKS)** **(4)**.
 
     ![Aks create](../images/create-aks.png)
 
-3. On the **Basics** tab of **Create Kubernetes Cluster**, configure the following options and leave all other settings as default and click on **Next** **(11)**. 
+1. On the **Basics** tab of **Create Kubernetes Cluster**, configure the following options and leave all other settings as default and click on **Next** **(11)**. 
 
     - **Subscription**: Select Avaiable Subscription **(1)**.
     - **Resource group**: Select **<inject key="resourcegroup" enableCopy="false"/>** **(2)**.
@@ -40,11 +40,15 @@ In this exercise, we set up an Azure Kubernetes Service (AKS) cluster via the Az
     - **Authentication and authorization**: Leave the setting set to `Local accounts with Kubernetes RBAC` **(10)**.
         ![](../images/create-aks-basic.png)
 
-4. On the **Node pools** tab, select **agentpool** **(1)** node pool, click on **Delete** **(2)** and click on **+ Add node pool** **(3)**.
+1. On the **Node pools** tab, select **agentpool** **(1)** node pool, click on **Delete** **(2)** and click on **+ Add node pool** **(3)**.
 
     ![](../images/create-aks-delete.png)
+  
+1. Select **Add a Virtual Machine Scale Set node pool** from the dropdown.
 
-5. Enter the following detils in **Update node pool** tab and click on **Add** **(7)**.
+    ![](../images/a-sql-g1.png)
+
+1. Enter the following detils in **Update node pool** tab and click on **Add** **(7)**.
 
     - **Node pool name**: Enter node name as `nplinux` **(1)**.
     - **Mode**: Select `System` **(2)**
@@ -52,50 +56,52 @@ In this exercise, we set up an Azure Kubernetes Service (AKS) cluster via the Az
     - **Availability zones**: setting to `None` **(4)**.
     - **Node size**: select `Choose a size` **(5)**. 
         - On the **Select a VM size** page, select `D2s_v3` **(1)**, then choose the `Select` **(2)** button.
-
-            ![](../images/add-new-node.png)
     
     - **Scale method**: Leave the setting set to `Autoscale` **(6)**.
 
         ![](../images/add-new-node.png)
 
-6. On the **Node pools** tab, click on **Review + create**.
+1. On the **Node pools** tab, click on **Review + create**.
 
     ![](../images/create-aks-click-review.png)
 
-7. On the **Review + create** tab, click on **Create**.
+1. On the **Review + create** tab, click on **Create**.
 
     ![](../images/new-review.png)
 
     > **Note**: The Deployment will take 5 to 10 minutes to create the AKS cluster, so you can proceed to the next exercise.
 
->**Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="799ff4d8-16ac-4fd4-99b5-32123bae7865" />
-   
 ### Exercise 2: Connect to the Cluster
 
 In this exercise, we connect to an AKS cluster. We start by opening the Cloud Shell in the Azure portal, select PowerShell, and set up a storage account if necessary. We then configure the connection to our Kubernetes cluster and verify it by checking the cluster nodes to ensure they are ready.
 
-1. In the Azure portal click on **Cloud Shell**, open it with the **>_** button on the top of the Azure portal and select `PowerShell`.
+1. In the Azure portal click on **Cloud Shell**
 
-      ![](../images/select-powershell.png)
+      ![](../images/a-sql-g2.png)
 
-2. If You don't have pre-created storage account, select **Mount storage account** and then click on **Apply**.
+1. Now select `PowerShell`.
 
-      ![](../images/cloudshell_image1.png)
+      ![](../images/a-sql-g3.png)
 
-3. Select **I want to create a storage**, click on **Next**. provide all the below details Click on **Create**.
+1. Select **Mount storage account (1)**, choose the default subscription **(2)**, and click **Apply (3)**.
+
+      ![](../images/a-sql-g4.png)
+
+1. Select **I want to create a storage account (1)** and click **Next (2).**
+
+      ![](../images/a-sql-g5.png)
+
+
+1. Provide all the below details Click on **Create**.
 
       - **Resource group**: Select the **<inject key="resourcegroup" enableCopy="false"/>**  Resource group.
       - **Region**: **<inject key="region"  enableCopy="false"/>**.
       - **Storage account**: Enter the name as **storage<inject key="DeploymentID"  enableCopy="false"/>** .
       - **File share**: Enter `blob` 
 
-        ![](../images/cloudshell_image2.png)
+        ![](../images/a-sql-g6.png)
 
-        ![](../images/cloudshell_image3.png)
-
-4. Configure `kubectl` to connect to your Kubernetes cluster using the `Import-AzAksCredential` cmdlet. This command downloads credentials and configures the Kubernetes CLI to use them.
+1. Configure `kubectl` to connect to your Kubernetes cluster using the `Import-AzAksCredential` cmdlet. This command downloads credentials and configures the Kubernetes CLI to use them.
 
       ```
       Import-AzAksCredential -ResourceGroupName <resouresegroupname> -Name <myAKSClustername>
@@ -103,11 +109,11 @@ In this exercise, we connect to an AKS cluster. We start by opening the Cloud Sh
 
       > **Note**: Replace `<resouresegroupname>` with **<inject key="resourcegroup" enableCopy="true"/>**  and `<myAKSClustername>` with **myAKSCluster-<inject key="DeploymentID"  enableCopy="true"/>**.
 
-5. Confirm Do you want to import the Kubernetes config?, type `y` and press `Enter`.
+1. Confirm Do you want to import the Kubernetes config?, type `y` and press `Enter`.
 
       ![](../images/create-aks-powershell-connect.png)
 
-6. Verify the connection to your cluster using `kubectl` to return a list of the cluster nodes.
+1. Verify the connection to your cluster using `kubectl` to return a list of the cluster nodes.
 
       ```
       kubectl get nodes
@@ -133,17 +139,17 @@ In this exercise, we deploy an application to an AKS cluster using a Kubernetes 
     ```
     code aks-store-quickstart.yaml
     ```
-2. After running the command a pop-up window will show up. click on **confirm**. it will take you to the classic powershell terminal.
+1. After running the command a pop-up window will show up. click on **confirm**. it will take you to the classic powershell terminal.
  
-     ![](../images/classic-pop-up.png)
+     ![](../images/a-sql-g7.png)
 
-3. Run the below command again, it will open the code editor.
+1. Run the below command again, it will open the code editor.
 
    ```
    code aks-store-quickstart.yaml
    ```
    
-4. Copy and Paste the following manifest into the editor:
+1. Copy and Paste the following manifest into the editor:
 
     ```yaml
     apiVersion: apps/v1
@@ -374,9 +380,9 @@ In this exercise, we deploy an application to an AKS cluster using a Kubernetes 
       type: LoadBalancer
     ```
 
-5. **Save** the file by pressing **Ctrl+S** and close the file.
+1. **Save** the file by pressing **Ctrl+S** and close the file.
 
-6. Deploy the application using the `kubectl apply` command and specify the name of your YAML manifest:
+1. Deploy the application using the `kubectl apply` command and specify the name of your YAML manifest:
 
     ```console
     kubectl apply -f aks-store-quickstart.yaml
@@ -405,7 +411,9 @@ In this exercise, we test the deployed AKS application by ensuring it is running
     kubectl get pods
     ```
 
-2. Check for a public IP address for the store-front application. Monitor progress using the [kubectl get service][kubectl-get] command with the `--watch` argument.
+    ![](../images/a-sql-g8.png)
+
+1. Check for a public IP address for the store-front application. Monitor progress using the [kubectl get service][kubectl-get] command with the `--watch` argument.
 
     ```azurecli
     kubectl get service store-front --watch
@@ -420,6 +428,8 @@ In this exercise, we test the deployed AKS application by ensuring it is running
 
     Once the **EXTERNAL-IP** address changes from *pending* to an actual public IP address, use `CTRL-C` to stop the `kubectl` watch process.
 
+      ![](../images/a-sql-g9.png)
+
     The following example output shows a valid public IP address assigned to the service:
 
     ```output
@@ -427,7 +437,7 @@ In this exercise, we test the deployed AKS application by ensuring it is running
     store-front   LoadBalancer   10.0.100.10   20.62.159.19   80:30025/TCP   4h5m
     ```
 
-3. Open a web browser to the external IP address of your service to see the Azure Store app in action.
+1. Open a web browser to the external IP address of your service to see the Azure Store app in action.
 
       ![](../images/aks-output1.png)
 
