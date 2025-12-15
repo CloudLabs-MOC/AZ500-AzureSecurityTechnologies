@@ -163,7 +163,9 @@ In this task, you will create an Azure Kubernetes service and review the deploye
     |----|----|
     |Enable virtual nodes|**Uncheck checkbox (1)**|
 
-    ![image](../images/az500lab9-13.png)      
+    ![image](../images/az500lab9-13.png)    
+
+     >**Note:** If any recommendation pop up appears, please click **Ignore**.  
  
 1. On the **Networking** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values) and then click on **Monitoring (2)** tab.
 
@@ -184,7 +186,7 @@ In this task, you will create an Azure Kubernetes service and review the deploye
 
     ![image](../images/az500lab9-16.png)  
 
-    >**Note**: Wait for the deployment to complete. This might take about 10 minutes.
+1. Wait for the deployment to complete. **This might take about 10 minutes**.
 
 1. Once the deployment completes, in the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type/search and select **Resource groups**.
 
@@ -329,7 +331,7 @@ In this task, verify the container can be accessed externally using the public I
     kubectl get service nginxexternal
     ```
 
-1. In the Bash session within the Cloud Shell pane, review the output and record the value in the **External-IP** column. You will need it in the next step. 
+1. In the Bash session within the Cloud Shell pane, review the output and record the value in the **External-IP** column. You will need it in the next step. If it is in a **Pending** state, then try to run the command again and again until you get the IP address.
 
     ![image](../images/az500lab9-29.png)     
 
@@ -385,7 +387,7 @@ In this task, you will deploy the internal facing service on the AKS.
 
     ![image](../images/az500lab9-32.png)         
 
-1. In the Bash session within the Cloud Shell pane, review the output. The External-IP is, in this case, a private IP address. If it is in a **Pending** state, then try to run the previous command again.
+1. In the Bash session within the Cloud Shell pane, review the output. The External-IP is, in this case, a private IP address. If it is in a **Pending** state, then try to run the command again and again until you get the IP address.
 
     ![image](../images/az500lab9-33.png)     
 
