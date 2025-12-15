@@ -45,7 +45,7 @@ In this task, you will create a virtual network.
 
    ![image](../images/az500lab12-2.png)    
 
-1. On the **IP addresses** tab of the **Create virtual network** blade, set the **IPv4 address space** to **10.0.0.0/16 (1)**. In the **Subnet name** column, click **default (2)** and, on the **Edit subnet** blade, specify the following settings, click **Save (5)** and then click on **Review+create (6)**.
+1. On the **IP addresses** tab of the **Create virtual network** blade, set the **IPv4 address space** to **10.0.0.0/16 (1)**. In the **Subnet name** column, click **default (2)** and, on the **Edit subnet** blade, specify the following settings, click **Save (5)** and then click on **Review + create (6)**.
 
     |Setting|Value|
     |---|---|
@@ -60,7 +60,7 @@ In this task, you will create a virtual network.
 
     >**Note**:If you are not able to edit the **default** first create the virtual network and go to subnets in created Virtual network and delete the Default Subnet and add **Public** Subnet 
 
-1. Click on **Go to resources**.    
+1. Click on **Go to resource**.    
 
      ![image](../images/AZ-500-l6-3.png)
 
@@ -115,7 +115,7 @@ In this task, you will create a network security group with two outbound securit
 
     >**Note**: In the next steps, you will create an outbound security rule that allows communication to the Azure Storage service. 
 
-1. Click on **Go to resources**.    
+1. Click on **Go to resource**.    
 
      ![image](../images/AZ-500-l6-8.png)
 
@@ -231,7 +231,7 @@ In this task, you will create a network security group with one inbound security
 
     >**Note**: In the next steps, you will create an outbound security rule that allows communication to the Azure Storage service. 
 
-1. Click on **Go to resources.**
+1. Click on **Go to resource.**
 
 1. On the **myNsgPublic** blade, in the **Settings** section, click **Inbound security rules (1)** and then click **+ Add (2)**.
 
@@ -315,7 +315,7 @@ In this task, you will create a storage account with a file share and obtain the
 
 8. On the storage account **Overview** blade, click **File Shares (1)** under the **Data storage** tab, and then click **+ File Share (2)**.
 
-    ![image](../images/new-lab06-5.png)
+    ![image](../images/lab6-ex1-t5p1.png)
 
 9. On the **New file share** blade, specify the following settings and click **Next: Backup > (2)**:
 
@@ -323,7 +323,7 @@ In this task, you will create a storage account with a file share and obtain the
     |---|---|
     |Name|**my-file-share (1)**|
 
-    ![image](../images/new-lab06-4.png)
+    ![image](../images/lab6-ex1-t5p2.png)
 
 10. On the **Backup** blade, ensure the **Enable backup** option is disabled **(1)** and then click on **Review+create (2)**
 
@@ -442,6 +442,7 @@ In this task, you will create two virtual machines one in the Private subnet and
     |Confirm password|**Pa55w.rd1234 (8)**|
     |Public inbound ports|**None (9)**|
     
+
     ![image](../images/AZ-500-l6-25.png)  
 
     ![image](../images/AZ-500-l6-26.png) 
