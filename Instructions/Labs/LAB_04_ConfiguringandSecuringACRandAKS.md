@@ -306,7 +306,7 @@ In this task, you will download the Manifest files, edit the YAML file, and appl
 
     ![image](../images/az500lab9-28.png)   
 
-1. In the editor pane, in the upper right corner, on keyboard press **CTRL + S** to save the file.
+1. In the editor pane, in the upper right corner, on keyboard press **CTRL + S** to save the file or right click on editor pane and select **Save**.
 
 1. In the Bash session within the Cloud Shell pane, run the following to apply the change to the cluster:
 
@@ -363,7 +363,7 @@ In this task, you will deploy the internal facing service on the AKS.
 
 1. In the editor pane, scroll down to the line containing the reference to the container image and replace the **`<ACRUniquename>`** placeholder with the ACR name.
 
-1. In the editor pane, in the upper right corner, on keyboard press **CTRL + S** to save the file.
+1. In the editor pane, in the upper right corner, on keyboard press **CTRL + S** to save the file or right click on editor pane and select **Save**.
 
 1. In the Bash session within the Cloud Shell pane, run the following to apply the change to the cluster:
 
