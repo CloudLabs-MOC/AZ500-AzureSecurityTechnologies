@@ -4,9 +4,15 @@ Welcome to your AZ-500: Microsoft Azure Security Technologies workshop! We've pr
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../images/labguide.png)
+![Access Your VM and Lab Guide](../images/1a.png)
+
+### Utilizing the Zoom In/Out Feature
+
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+![Access Your VM and Lab Guide](../images/1a6.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -16,25 +22,25 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../images/env.png)
+![Explore Lab Resources](../images/1a2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../images/spl.png)
+![Use the Split Window Feature](../images/1a3.png)
  
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../images/res.png)
+![Manage Your Virtual Machine](../images/1a5.png)
 
 ## **Lab Duration Extension**
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
 
-    ![Manage Your Virtual Machine](../images/gext.png)
+    ![Manage Your Virtual Machine](../images/1a7.png)
 
     >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
 
@@ -50,23 +56,19 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
     ![Launch Azure Portal](../images/Getting.png)
  
-2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
+1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
       ![Enter Your Username](../images/AZ-500-siginazportal.png)
  
-3. Next, provide your password:
+1. Next, provide your password:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
  
-     ![Enter Your Password](../images/AZ-500-pass.png)
+     ![Enter Your Password](../images/gg15.png)
 
-1. If you are directed to the **Security Defaults Enabled** pop up, please click on **Ask later**    
-   
-   ![](../images/AZ-500-security.png)
- 
-4. If prompted to stay signed in, you can click **No**.
+1. If prompted to stay signed in, you can click **No**.
 
     ![](../images/AZ-500-staysignedin.png)
  

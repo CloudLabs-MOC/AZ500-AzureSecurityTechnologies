@@ -166,9 +166,9 @@ In this task, you will first configure server level auditing and then configure 
 
     - Now choose the created Storage account in the Storage account field.     
 
-1. Back on the **Auditing** blade, under **Advanced properties** set **Retention (days)** to **5 (5)** and click **Save (6)**.
+1. Back on the **Auditing** blade, under **Advanced properties (5)** set **Retention (days)** to **5 (6)** and click **Save (7)**.
     
-    ![image](../images/az500lab11-7.png)
+    ![image](../images/1a4.png)
    
      >**Note**: If you receive an error message regarding invalid storage container path then the storage account may not have have been provisioned yet. Wait a few minutes, click **Storage account**, on the **Choose storage account** blade, select the newly created storage account and back on the Auditing blade, click **Save**.
 
