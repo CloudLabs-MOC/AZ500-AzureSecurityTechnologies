@@ -257,7 +257,7 @@ In this task, you will enable a client application to access the Azure SQL Datab
     |Setting|Value|
     |----|----|
     |Name|**sqlApp**|
-    |Redirect URI (optional)|**Web** and **https://sqlapp**|
+    |Redirect URI (optional)|**Web** and **https://sqlapp/**|
 
      ![image](../images/new-lab07-14.png)
 
@@ -292,7 +292,7 @@ In this task, you will enable a client application to access the Azure SQL Datab
 
       >**Note**: Record this value. You will need it in the next task. 
 
-      >**Note**: Make sure to copy the value *before* you navigate away from the blade. Once you do, it is no longer possible to retrieve its clear text value.
+1. Make sure to copy and paste the value in a notepad *before* you navigate away from the blade. Once you do, it is no longer possible to retrieve its clear text value.
 
 ### Task 2: Create a policy allowing the application access to the Key Vault.
 
@@ -356,9 +356,9 @@ In this task, you log on to the Azure VM, which deployment you initiated in Exer
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **virtual machines** and press the **Enter** key.
 
-1. In the list of Virtual Machines shown, select the **az500-10-vm1** entry. On the **az500-10-vm1** blade, on the **Essentials** pane, take note of the **Public IP address**. You will use this later. 
+1. In the list of Virtual Machines shown, select the **az500-10-vm1** entry. On the **az500-10-vm1** blade, on the **Essentials** pane, take note of the **Primary NIC Public IP**. You will use this later. 
 
-     ![image](../images/new-lab07-18.png)
+     ![image](../images/gg21.png)
 	
 ### Task 5: Create a table in the SQL Database and select data columns for encryption
 
@@ -399,6 +399,10 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 1. Click on **Open file** to open the RDP file.
 
 1. Select **Connect**.
+
+1. Click on **More Choices**.
+
+1. Select **Use a different account**.
 	
 1. When prompted to authenticate, provide the following credentials and click **Ok**. 
 	
@@ -413,9 +417,9 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 
     >**Note**: The remaining steps in this lab are performed within the Remote Desktop session to the **az500-10-vm1** Azure VM. 
 
-1. Click **Start (1)**, in the **Start** menu, expand the **Microsoft SQL Server Tools 21 (2)** folder, and click the **SQL Server Management Studio 21 (3)** menu item.
+1. Click **Start (1)**, in the **Start** menu, expand the **Microsoft SQL Server Tools 22 (2)** folder, and click the **SQL Server Management Studio 22 (3)** menu item.
 
-    ![image](../images/az7l18.png) 
+    ![image](../images/gg16.png) 
 
 1. Select **Skip and add account later**.
 
@@ -477,25 +481,33 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 
     ![image](../images/az7l27.png)
 
+1. If promoted, select **Microsoft**.
+
+    ![image](../images/gg17.png)
+
+1. Choose **Work or School account**.    
+
 1. When prompted, authenticate by using the same user account you used to provision the Azure Key Vault instance earlier in this lab.
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-1. Select **Sign in to this App only**.
+1. Select **No, to this App only**.
 
 1. Select **OK**.
 
     ![image](../images/az7l28.png)
 
-1. Select **Done**.
+1. If prompted, select **Done**.
 
     ![image](../images/az7l29.png)
 
-1. Select the **Tenant name (1)**, **Subscrptio name (2)**. Ensure that Key Vault appears in the **Select an Azure Key Vault** drop-down list **(3)**, and click **Next (4)**.
+1. Select the **Tenant name (1)**, **Subscrption name (2)**. Ensure that Key Vault appears in the **Select an Azure Key Vault** drop-down list **(3)**, and click **Next (4)**.
 
     ![image](../images/az7l30.png)
+
+     >**Note:** **After selecting subscription group, if prompted to sign in, please do sign in**.
 
 1. On the **Run Settings** page, click **Next**.
 	
@@ -527,13 +539,13 @@ In this exercise, you will run a data-driven application to demonstrate how Azur
 
     ![image](../images/az7l37png.png)
 
-1. Navigate to **Available (1)** tab, scroll down and click on **Install (2)** for **Visual Studio Community 2022**.
+1. Navigate to **Available (1)** tab, scroll down and click on **Install (2)** for **Visual Studio Community 2026**.
 
-    ![image](../images/az7l38.png)
+    ![image](../images/gg18.png)
 
-1. Select **ASP.NET and web developmemt (1)** and **Azure Developement** checkbox and then select **Install (2)**.
+1. Select **ASP.NET and web developmemt (1)** and **Azure and AI Developement (2)** checkbox and then select **Install (3)**.
 
-    ![image](../images/az7l36.png)
+    ![image](../images/gg19.png)
 
 1. Wait for the Workload installation to complete. it might take around `10-15` mins. Please wait until its done.
 
@@ -541,6 +553,10 @@ In this exercise, you will run a data-driven application to demonstrate how Azur
 ### Task 2: Run a data-driven application to demonstrate the use of Azure Key Vault in encrypting the Azure SQL database
 
 You will create a Console application using Visual Studio to load data into the encrypted columns and then access that data securely using a connection string that accesses the key in the Key Vault.
+
+1. Once the Visual Studio is ready, click on **Launch** to open the Visual Studio.
+
+    ![image](../images/gg20.png)
 
 1. Once the Visual Studio is ready, click on **Skip and add account later**.
 
