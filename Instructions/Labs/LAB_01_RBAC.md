@@ -18,7 +18,7 @@ In this lab, you will complete the following exercises
 - Exercise 3: Create the Service Desk group with the user Dylan Williams as its member (Azure CLI). 
 - Exercise 4: Assign the Virtual Machine Contributor role to the Service Desk group.
 
-## Estimated timing: 40 minutes
+## Estimated timing: 40 Minutes
 
 ## Architecture Diagram
 
@@ -56,11 +56,11 @@ In this task, you will create a user account for Joseph Price.
 
     - Click on the **copy icon (3)** next to the **User principal name** to copy the full username, and pasted it somewhere.
 
-    - Ensure that the **Auto-generate password (4)** is selected, select the **Show password (5)** checkbox to identify the automatically generated password and click on the copy icon next to **Password (6)** and paste it somewhere. You would need to provide this password, along with the user name to Joseph. 
+    - Ensure that the **Auto-generate password (4)** is selected, and click on the copy icon next to **Password (5)** and paste it somewhere. You would need to provide this password, along with the user name to Joseph. 
 
-    - Click on **Review + create (7)**, and then click on **Create**.
+    - Click on **Review + create (6)**, and then click on **Create**.
 
-      ![image](../images/az-500-lab1-image2.png)
+      ![image](../images/ex1-t1p1.png)
 
 1. Refresh the **Users \| All users** blade to verify the new user was created in your Azure AD tenant.
 
@@ -90,11 +90,11 @@ In this task, you will create the *Senior Admins* group, add the user account of
     
     - Click on the **No owners selected (4)** link, on the **Owners** blade, select **Joseph Price (5)**, and click on **Select (6)**.
 
-      ![image](../images/az500-7.png)
+      ![image](../images/ex2-t1p1.png)
 
 1. Click on the **No members selected (1)** link, on the **Members** blade, search for **Joseph (2)** then select **Joseph Price (3)**, and click on **Select (4)**.
 
-    ![image](../images/az500-8.png)
+    ![image](../images/ex2-t1p2.png)
 
 1. Back on the **New Group** blade, click on **Create**.
 
@@ -236,7 +236,7 @@ In this task, you will create the Junior Admins group and add the user account o
     Get-AzADGroupMember -GroupDisplayName "Junior Admins"
     ```
 
-    ![image](../images/az500-18.png)        
+    ![image](../images/ex2-t2p1.png)        
 
      > **Result:** You used PowerShell to create a user and a group account, and added the user account to the group account. 
 
@@ -253,7 +253,7 @@ In this task, you will create a user account for Dylan Williams.
 
 1. In the drop-down menu in the upper-left corner of the Cloud Shell pane, select **Switch to Bash**, and, when prompted.
 
-   ![image](../images/az500-19.png)
+   ![image](../images/ex3-t1p1.png)
 
 1. Click on **Confirm**. 
 
@@ -344,13 +344,13 @@ In this exercise, you will complete the following task:
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups (1)** and select **Resource groups (2)** from the services.
 
-   ![image](../images/az500-24.png)
+   ![image](../images/ex4-t1p1.png)
 
 1. On the **Resource groups** blade, click on the **AZ500LAB01** resource group entry.
 
-1. On the **AZ500LAB01** blade, click on **Access control (IAM)**.
+1. On the **AZ500LAB01** blade, click on **Access control (IAM) (1)**.
 
-1. On the **AZ500LAB01 \| Access control (IAM) (1)** blade, click on **+ Add (2)** and then, in the drop-down menu, click on **Add role assignment (3)**.
+1. On the **AZ500LAB01 \| Access control (IAM)** blade, click on **+ Add (2)** and then, in the drop-down menu, click on **Add role assignment (3)**.
 
    ![image](../images/az500-26.png)
 
@@ -398,8 +398,8 @@ In this exercise, you will complete the following task:
    - Hit the Validate button for the corresponding task.
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
    <validation step="b8b0d15c-4752-41bc-86ee-10bb1220b83e" />
 
-### You have successfully completed the lab
+### You have successfully completed the lab.

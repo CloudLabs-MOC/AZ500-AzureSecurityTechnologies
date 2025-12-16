@@ -18,7 +18,7 @@ In this lab, you will complete the following exercise:
 
 - Exercise 1: Deploy and test an Azure Firewall
 
-## Estimated timing: 40 minutes
+## Estimated timing: 40 Minutes
 
 ## Architecture Diagram
 
@@ -56,7 +56,7 @@ In this task, you will create a virtual machine by using an ARM template. This v
 
    ![image](../images/az500lab8-3.png)
 
-1. Navigate to the **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\08** **(1)** folder, then select **template.json (2)** file and then click **Open (3)**.
+1. Navigate to the **`C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\08`** **(1)** folder, then select **template.json (2)** file and then click **Open (3)**.
 
     ![image](../images/az500lab8-112.png)
 
@@ -66,7 +66,7 @@ In this task, you will create a virtual machine by using an ARM template. This v
 
    ![image](../images/az500lab8-4.png)
 
-1. On the **Custom deployment** blade, ensure that the following settings are configured (leave any others with their default values) and then click on **Review+create (4)**.
+1. On the **Custom deployment** blade, ensure that the following settings are configured (leave any others with their default values) and then click on **Review + create (4)**.
 
    |Setting|Value|
    |---|---|
@@ -88,9 +88,9 @@ In this task you will deploy the Azure firewall into the virtual network.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type/search **Firewalls (1)** and select **Firewalls (2)**.
 
-   ![image](../images/az500lab8-6.png)
+   ![image](../images/lab3-ex1-t1p1.png)
 
-1. On the **Network security| Azure Firewalls** blade, click **+ Create**.
+1. On the **Network security | Azure Firewalls** blade, click **+ Create**.
 
    ![image](../images/az500lab8-7.png)
 
@@ -403,9 +403,9 @@ In this task, you will test the firewall to confirm that it works as expected.
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 <validation step="d7fc707d-6388-4dd1-80f2-5092ff0d75a8" />
 
-### You have successfully completed the lab
+### You have successfully completed the lab.
 

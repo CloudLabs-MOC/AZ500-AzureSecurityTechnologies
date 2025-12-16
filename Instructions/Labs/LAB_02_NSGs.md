@@ -39,7 +39,7 @@ In this task, you will create a virtual network to use with the network and appl
 
    ![image](../images/az500lab7-1.png)
 
-1. On the **Netowork foundation | Virtual networks** blade, click **+ Create**.
+1. On the **Network foundation | Virtual networks** blade, click **+ Create**.
 
    ![image](../images/az500lab7-2.png)
 
@@ -135,7 +135,7 @@ In this task, you will create a network security group.
 
    ![image](../images/az500lab7-116.png)
 
-1. On the **Basics** tab of the **Create network security group** blade, specify the following settings and then click on **Review+Create (5)**.
+1. On the **Basics** tab of the **Create network security group** blade, specify the following settings and then click on **Review + create (5)**.
 
     |Setting|Value|
     |---|---|
@@ -150,7 +150,7 @@ In this task, you will create a network security group.
 
    ![image](../images/az500lab7-117.png)
 
-1. After deployment succeeded, click on **Go to resources**.
+1. After deployment succeeded, click on **Go to resource**.
 
    ![image](../images/az500lab7-118.png)
 
@@ -184,7 +184,7 @@ In this task, you will create a network security group.
     |Priority|**100 (5)**|                                                    
     |Name|**Allow-Web-All (6)**|
 
-    ![image](../images/az500lab7-14.png)       
+    ![image](../images/lab2-ex4-t1p1.png)       
 
 1. On the **myNsg** blade, in the **Settings** section, click **Inbound security rules (1)**, and then click **+ Add (2)**.
 
@@ -202,7 +202,7 @@ In this task, you will create a network security group.
     |Priority|**110 (4)**|                                                
     |Name|**Allow-RDP-All (5)**|
 
-    ![image](../images/az500lab7-15.png)     
+    ![image](../images/lab2-ex4-t1p2.png)     
 
      > Result: You have deployed a virtual network, network security with inbound security rules, and two application security groups. 
 
@@ -225,7 +225,7 @@ In this task, you will create a virtual machine to use as a web server.
 
 1. On the **Computer infrastructure | Virtual machines** blade, click **+ Create (1)** and, in the dropdown list, click **Virtual machine (2)**.
 
-    ![image](../images/az500lab7-17.png)
+    ![image](../images/lab2-ex2-t1p1.png)
 
 1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values) and then click on **Next: Disks >(15)**.
 
@@ -255,9 +255,9 @@ In this task, you will create a virtual machine to use as a web server.
  
      >**Note**: For public inbound ports, we will rely on the precreated NSG. 
 
-1. On the **Disks** tab of the **Create a virtual machine** blade, set the **OS disk type** to **Standard HDD** and click **Next: Networking >**.
+1. On the **Disks** tab of the **Create a virtual machine** blade, set the **OS disk type** to **Standard HDD (1)** and click **Next: Networking > (2)**.
 
-   ![image](../images/lab1-7.png)
+   ![image](../images/lab2-ex2-t1p2.png)
 
 1. On the **Networking** tab of the **Create a virtual machine** blade, select the previously created network **myVirtualNetwork (1)**. Under **NIC network security group** select **None (2)** and then click on **Next: Management > (3)**.
 
@@ -349,9 +349,9 @@ In this task, you will associate each virtual machine's network interface with t
 
    ![image](../images/az500lab7--30.png)  
 
-1. On the **myVmWeb** blade, in the **Networking** section, select **Application security groups (1)** an then click on **+ Application security groups (2)**.
+1. On the **myVmWeb** blade, in the **Networking** section, select **Application security groups (1)** an then click on **+ Add application security groups (2)**.
 
-   ![image](../images/az500lab7-31.png)  
+   ![image](../images/lab2-ex2-t2p1.png)  
 
 1. On the **Add Application security groups** select **myAsgWebServers (1)**, and then click **Add (2)**.
 
@@ -448,7 +448,7 @@ In this task, you will test the network traffic filters. You should be able to R
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
    <validation step="63a375cc-ae94-418b-a78c-4561f35ff40d" />
 
