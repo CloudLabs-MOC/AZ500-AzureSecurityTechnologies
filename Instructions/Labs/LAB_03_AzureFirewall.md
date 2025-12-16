@@ -80,7 +80,7 @@ In this task, you will create a virtual machine by using an ARM template. This v
 
 1. Then click **Create**.
 
-    >**Note**: Wait for the deployment to complete. This should take about 2 minutes. 
+1. Wait for the deployment to complete before proceeding to the next Task. This should take about 2 minutes. 
 
 ## Task 2: Deploy the Azure firewall
 
@@ -122,7 +122,7 @@ In this task you will deploy the Azure firewall into the virtual network.
 
     ![image](../images/az500lab8-10.png)  
 
-     >**Note**: You might need to scroll up to see the **Review + create**, Wait for the deployment to complete. This should take about 5 -10 minutes. 
+     >**Note**: You might need to scroll up to see the **Review + create**, Wait for the deployment to complete. This should take about **`5 -10`** minutes. 
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type/search for **Resource groups (1)** and select **Resource groups (2)**.
 
@@ -134,7 +134,7 @@ In this task you will deploy the Azure firewall into the virtual network.
 
      >**Note**: On the **AZ500LAB03** resource group blade, review the list of resources. You can sort by **Type**.
 
-1. In the list of resources, click the entry representing the **Test-FW01** firewall.
+1. In the list of resources, search for **Test-FW01** and then click the entry representing the **Test-FW01** firewall.
 
     ![image](../images/az500lab8-13.png)  
 
@@ -169,7 +169,9 @@ In this task, you will create a default route for the **Workload-SN** subnet. Th
 
 1. Then click **Create**, and wait for the provisioning to complete. 
 
-1. On the **Route tables** blade, click **Refresh**, and, in the list of route tables, click the **Firewall-route** entry.
+1. Click on **Go to resource**.
+
+1. Search for **Firewall-route** and then select **Firewall-route**.
 
 1. On the **Firewall-route** blade, in the **Settings** section, click **Subnets (1)** and then, on the **Firewall-route \| Subnets** blade, click **+ Associate (2)**.
 
