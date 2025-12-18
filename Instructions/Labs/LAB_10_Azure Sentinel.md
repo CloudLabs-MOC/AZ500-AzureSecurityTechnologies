@@ -106,9 +106,9 @@ In this task, you will configure Sentinel to use the Azure Activity data connect
 
 1. Verify that the **Azure Activity** pane displays the **Data received** graph (you might have to refresh the browser page).  
 
-    ![image](../images/AZ-500l10-9.png) 
+    ![image](../images/lab10-12-05.png) 
 
-    >**Note**: It may take over 15 minutes before the Status shows "Connected" and the graph displays Data received.
+    >**Note:** It may take over 15 minutes before the Status shows "Connected" and the graph displays Data received.
 
 ## Task 3: Create a rule that uses the Azure Activity data connector. 
 

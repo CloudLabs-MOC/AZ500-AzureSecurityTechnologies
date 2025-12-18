@@ -57,7 +57,7 @@ In this task, you will implement the Microsoft Defender for Cloud recommendation
 
 1. In the search box at the top of the portal, enter **virtual machines**. Select **Virtual machines** in the search results.
 
-1. Select **myVM**.
+1. On **Compute infrastructure | Virtual machines** page, select **myVM**.
 
    ![image](../images/br23.png)
 
