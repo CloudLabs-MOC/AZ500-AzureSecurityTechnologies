@@ -33,7 +33,9 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will on-board and configure Microsoft Defender for Cloud.
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Microsoft Defender for Cloud** and press the **Enter** key.
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Microsoft Defender for Cloud (1)** and select **Microsoft Defender for Cloud (2)** from results. 
+
+   ![image](../images/lab9-12-1.png)
 
 1. On the **Microsoft Defender for Cloud | Overview** blade, in the vertical menu on the left side, in the **Management** section, click **Environment Settings (1)**. 
 
@@ -59,9 +61,11 @@ In this task, you will implement the Microsoft Defender for Cloud recommendation
 
    ![image](../images/br23.png)
 
-1. Select **Configuration (1)**from the Settings section of **myVM**. Under Just-in-time VM access, select **Enable just-in-time (2)**.
+1. Select **Configuration (1)** from the **Settings (1)** section of **myVM**. Under Just-in-time VM access, select **Enable just-in-time (2)**.
 
-   ![image](../images/br24.png)
+   ![image](../images/lab9-12-2.png)
+
+   >**Note:** If Just-in-time VM access cannot be enabled immediately, wait 5 minutes and try again.
 
 1. Under Just-in-time VM access, click on the link that reads **Open Microsoft Defender for Cloud**.
 
@@ -84,7 +88,7 @@ In this task, you will implement the Microsoft Defender for Cloud recommendation
 
    - From the **Configured** tab, right-click on the VM to which you want to add a port, and select **edit**.
 
-     ![image](../images/br27.png)   
+     ![image](../images/lab9-12-3.png)   
 
    - Under **JIT VM access configuration,** you can either edit the existing settings of an already protected port or add a new custom port.
    - When you've finished editing the ports, select **Save.**   
@@ -103,8 +107,6 @@ In this task, you will implement the Microsoft Defender for Cloud recommendation
     
         - If JIT is enabled, select **Request access** to pass an access request with the requesting IP, time range, and ports that were configured for that VM.
     
-
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.

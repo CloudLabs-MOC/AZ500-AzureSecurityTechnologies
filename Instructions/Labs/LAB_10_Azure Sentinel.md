@@ -78,25 +78,29 @@ In this task, you will configure Sentinel to use the Azure Activity data connect
 
 1. On the **Configure Azure Activity logs to stream to specified Log Analytics workspace** (Assign Policy page) **Basics** tab, click the **Scope ellipsis (...) (1)** button. In the **Scope** page choose your subscription from the drop-down subscription list **(2)** and click the **Select (3)** button at the bottom of the page.
 
-    ![image](../images/AZ-500-l10-7.png) 
+    ![image](../images/lab10-12-1.png) 
 
     >**Note**: **Do not** select a Resource Group
 
 1. Click the **Next (4)** button at the bottom of the **Basics** tab and proceed to the **Parameters** tab. On the **Parameters** tab click the **Primary Log Analytics workspace ellipsis (...) (1)** button. In the **Primary Log Analytics workspace** page, make sure your Azure pass subscription is selected **(2)** and use the **workspaces** drop-down to select the Log Analytics workspace you are using for Sentinel **(3)**. When done click the **Select (4)** button at the bottom of the page.
 
-    ![image](../images/AZ-500-l10-8.png) 
+    ![image](../images/lab10-12-2.png) 
 
-1. Click the **Next (5)** button at the bottom of the **Parameters** tab to proceed to the **Remediation** tab. On the **Remediation** tab select the **Create a remediation task (1)** checkbox. This will enable the "Configure Azure Activity logs to stream to specified Log Analytics workspace" in the **Policy to remediate** drop-down. In the **System assigned identity location** drop-down, select the region (East US for example) **(2)** you selected earlier for your Log Analytics workspace.
+1. Click the **Next (5)** button at the bottom of the **Parameters** tab to proceed to the **Remediation** tab. On the **Remediation** tab select the **Create a remediation task (1)** checkbox. This will enable the "Configure Azure Activity logs to stream to specified Log Analytics workspace" in the **Policy to remediate** drop-down. Then click **Next (2)** to continue.
 
-    ![image](../images/AZ-500-l10-9.png) 
+     ![image](../images/lab10-12-3.png) 
 
-1. Click the **Next (3)** button at the bottom of the **Remediation** tab to proceed to the **Non-compliance message** tab.  Enter a Non-compliance message if you wish (this is optional) and click the **Review + Create** button at the bottom of the  **Non-compliance message** tab.
+1. On the **Managed identity** tab, ensure **Create a Managed Identity (1)** is enabled, in the **System assigned identity location** drop-down, select the region (East US for example) **(2)** you selected earlier for your Log Analytics workspace.
 
-    ![image](../images/AZ-500-l10-10.png) 
+    ![image](../images/lab10-12-4.png) 
+
+1. Click the **Next (3)** button at the bottom of the **Managed identity** tab to proceed to the **Non-compliance message** tab.  Enter a Non-compliance message if you wish (this is optional) and click the **Review + Create** button at the bottom of the  **Non-compliance message** tab.
+
+    ![image](../images/lab10-12-5.png) 
 
 1. Click the **Create** button. You should observe three succeeded status messages: **Creating policy assignment succeeded, Role Assignments creation succeeded, and Remediation task creation succeeded**.
 
-    ![image](../images/AZ-500-l10-11.png) 
+    ![image](../images/lab10-12-6.png) 
 
     >**Note**: You can check the Notifications, bell icon to verify the three successful tasks.
 
@@ -162,7 +166,7 @@ In this task, you will create a playbook. A security playbook is a collection of
 
     ![image](../images/az-500-5a2.png)
 
-    ![image](../images/AZ-500-l10-19.png)
+    ![image](../images/lab10-12-7.png)
 
     >**Note**: You can find sample playbooks at [https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks).
 
@@ -180,7 +184,7 @@ In this task, you will create a playbook. A security playbook is a collection of
 
 1. Click **Review + create (6)** and then click **Create**.
 
-    ![image](../images/AZ-500l10-16.png)
+    ![image](../images/lab10-12-8.png)
 
     >**Note**: Wait for the deployment to complete.
 
@@ -190,7 +194,7 @@ In this task, you will create a playbook. A security playbook is a collection of
 
 1. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB080910** entry.
 
-    ![image](../images/AZ-500-l10-20.png)
+    ![image](../images/lab10-12-9.png)
 
 1. On the **AZ500LAB080910** resource group blade, in the list of resources, click the entry representing the newly created **Change-Incident-Severity** logic app.
 
@@ -206,7 +210,7 @@ In this task, you will create a playbook. A security playbook is a collection of
 
    >**Note** You need to click on **Change Connection** to add a new connection.
 
-   ![image](../images/connection.png)
+   ![image](../images/lab10-12-10.png)
 
 1. Click **Add new**, ensure that the entry in the **Tenant** drop down list contains your Azure AD tenant name and click **Sign-in**.
 
@@ -349,7 +353,7 @@ In this task, you will create a playbook. A security playbook is a collection of
     - Select **Change-Incident-Severity (3)** playbook from the drop down
     - Select **Apply (4)**
 
-      ![image](../images/br7.png)
+      ![image](../images/lab10-12-11.png)
 
 >**Note**: You now have a new active rule called **Playbook Demo**. If an event identified by the rue logic occurs, it will result in a medium severity alert, which will generate a corresponding incident.      
 
@@ -359,19 +363,19 @@ In this task, you will create a playbook. A security playbook is a collection of
 
     >**Note**: Check your secure score. By now it should have updated.
 
-1. On the **Microsoft Defender for Cloud \| Overview** blade, under **Cloud Security** select **Workload protections (1)** section.
+1. On the **Microsoft Defender for Cloud \| Overview** blade, under **Cloud Security (1)** select **Workload protections (2)** section.
 
-    - On the **Microsoft Defender for Cloud \| Workload protections** blade under **Advanced protection** select **Just-in-time VM access (2)**.
+    - On the **Microsoft Defender for Cloud \| Workload protections** blade under **Advanced protection** select **Just-in-time VM access (3)**.
 
-      ![image](../images/br8.png)    
+      ![image](../images/lab10-12-12.png)    
 
 1. On the **Just in time VM access** blade, under the **Configured (1)** blade, on the right hand side of the row referencing the **myVM** virtual machine, click the ***ellipsis (...) (2)** button,  click **Remove (3)**. 
 
-    ![image](../images/br9.png)
+    ![image](../images/lab10-12-13.png)
 
 1. Then click **Yes**.
 
-    ![image](../images/br10.png)
+    ![image](../images/lab10-12-14.png)
 
      >**Note:** If the VM is not listed in the **Just-in-time VMs**, navigate to **Virutal Machine** blade and click the **Configuration**, Click the **Enable the Just-in-time VMs** option under the **Just-in-time Vm's access**. Repeat the above step to navigate back to the **Microsoft Defender for Cloud** and refresh the page, the VM will appear.
 
@@ -379,7 +383,7 @@ In this task, you will create a playbook. A security playbook is a collection of
 
 1. On the **Activity log** blade, note an **Delete JIT Network Access Policies** entry.   This may take a few minutes to appear. **Refresh** the page if it does not appear. You can also try to search for the entry in Activity logs. 
 
-    ![image](../images/br11.png)
+    ![image](../images/lab10-12-15.png)
     
 1. Navigate back to the **Microsoft Defender** portal.
 

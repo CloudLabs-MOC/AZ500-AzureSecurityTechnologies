@@ -12,7 +12,7 @@ You have been asked to create a proof of concept for monitoring virtual machine 
 In this lab, you will complete the following exercise:
 - Exercise 1: Collect data from an Azure virtual machine with Azure Monitor
 
-## Estimated timing: 45 minutes
+## Estimated timing: 45 Minutes
 
 ## Architecture Diagram
 
@@ -31,15 +31,15 @@ In this exercise, you will complete the following tasks:
 
 1. From the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-    ![](../images/unit6-image1.png)
+    ![](../images/lab8-12-1.png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **Powershell**.
 
-    ![](../images/pwershell1.png)
+    ![](../images/lab8-12-2.png)
    
 1. On the Getting started, select **No storage account required (1)** and select your **Subscription (2)** under storage account subscription. Click on **Apply (3)**.
 
-     ![](../images/New-image110.png)
+     ![](../images/lab8-12-3.png)
 
 1. In the upper-left menu of the Cloud Shell pane, make sure you are using **Powershell**. If not selected select **Switch to Powershell**. In **Switch to Powershell in Cloud Shell** pop-up select **Confirm**.
 
@@ -62,9 +62,9 @@ In this exercise, you will complete the following tasks:
     |User name|**localadmin**|
     |Password|**Pa55w.rd1234**|
 
-    ![](../images/br14.png)
+    ![](../images/lab8-12-4.png)
 
-     >**Note**: Wait for the deployment to complete. 
+     >**Note:** Wait for the deployment to complete. 
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to confirm that the virtual machine named **myVM** was created and its **ProvisioningState** is **Succeeded**.
 
@@ -72,7 +72,7 @@ In this exercise, you will complete the following tasks:
     Get-AzVM -Name 'myVM' -ResourceGroupName 'AZ500LAB080910' | Format-Table
     ```
 
-     ![](../images/br15.png)    
+     ![](../images/lab8-12-5.png)    
 
 1. Close the Cloud Shell pane. 
 
@@ -99,6 +99,8 @@ In this task, you will create a Log Analytics workspace.
    
 1. On the **Review + create** tab of the **Create Log Analytics workspace** blade, click **Create**.
 
+     ![](../images/lab8-12-6.png)
+
 ## Task 3: Create an Azure storage account
 
 In this task, you will create a storage account.
@@ -107,9 +109,9 @@ In this task, you will create a storage account.
 
    ![](../images/New-image113.png)
 
-2. On the **Storage accounts** blade in the Azure portal, click the **+ Create** button to create a new storage account.
+2. On the **Storage center | Blob Storage** blade in the Azure portal, click the **+ Create** button to create a new storage account.
 
-    ![](../images/New-image114.png)
+    ![](../images/lab8-12-7.png)
 
 3. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values) and then click on **Review+create (7)**.
 
@@ -122,7 +124,7 @@ In this task, you will create a storage account.
     |Performance|**Standard (general-purpose v2 account) (5)**|
     |Redundency|**Locally redundant storage (LRS) (6)**|
 
-    ![](../images/New-image(115).png)
+    ![](../images/lab8-12-8.png)
    
 4. Wait for the validation process to complete, and click **Create**.
 
@@ -134,11 +136,11 @@ In this task, you will create a data collection rule.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Monitor (1)** and select **Monitor (2)** from the services.
 
-      ![](../images/New-image116.png)
+      ![](../images/lab8-12-9.png)
    
-1. On the **Monitor Settings** blade, click **Data Collection Rules (1) > Create (2)**.
+1. On the **Monitor | Data Collection Rules** blade, click **Data Collection Rules (1)** under **Setting (1)**, and select **+ Create (2)**.
 
-   ![](../images/New-image117.png)
+   ![](../images/lab8-12-10.png)
 
 1. On the **Basics** tab of the **Create Data Collection Rule** blade, specify the following settings and then click on **Next: Resources > (6)**.
   
