@@ -438,7 +438,7 @@ In this task, you will use one of the pods running on the AKS cluster to access 
 
 <validation step="f74f6cd9-a7e4-40d3-a11b-cf38751bb93f" />
 
-### Review
+## Summary
 
 In this lab, you have completed:
 - Created an Azure Container Registry

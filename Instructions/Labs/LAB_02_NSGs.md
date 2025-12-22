@@ -452,4 +452,15 @@ In this task, you will test the network traffic filters. You should be able to R
  
    <validation step="63a375cc-ae94-418b-a78c-4561f35ff40d" />
 
+## Summary
+In this lab, you have completed the following:
+
+* Created a virtual network and subnet
+* Created **Application Security Groups (ASGs)** for web servers and management servers
+* Created and associated a **Network Security Group (NSG)** with the subnet
+* Configured NSG rules to allow **HTTP/HTTPS** to web servers and **RDP** to management servers
+* Deployed web and management virtual machines
+* Associated VM network interfaces with their respective ASGs
+* Verified network filtering by testing RDP access and IIS web access
+
 ### You have successfully completed the lab

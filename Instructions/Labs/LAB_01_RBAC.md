@@ -402,4 +402,14 @@ In this exercise, you will complete the following task:
  
    <validation step="b8b0d15c-4752-41bc-86ee-10bb1220b83e" />
 
+## Summary
+In this lab, you have completed the following:
+
+* Created Azure AD user accounts using the **Azure Portal**, **PowerShell**, and **Azure CLI**
+* Created security groups for **Senior Admins**, **Junior Admins**, and **Service Desk**
+* Added users to their respective groups
+* Assigned group ownership and membership appropriately
+* Assigned the **Virtual Machine Contributor** role to the Service Desk group
+* Verified **RBAC permissions** using the Check Access feature
+
 ### You have successfully completed the lab.

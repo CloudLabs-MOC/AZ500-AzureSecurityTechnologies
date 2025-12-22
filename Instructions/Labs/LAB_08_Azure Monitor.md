@@ -195,6 +195,18 @@ In this task, you will create a data collection rule.
  
    <validation step="2438c3db-e10e-4895-88cd-b6f1ffa433ca" />
 
+## Summary
+
+In this lab, you have completed:
+
+* Deployed an **Azure Virtual Machine** for monitoring and telemetry collection.
+* Created a **Log Analytics Workspace** to store and analyze logs and performance data.
+* Created an **Azure Storage Account** to support monitoring and diagnostics scenarios.
+* Configured a **Data Collection Rule (DCR)** for Windows virtual machines.
+* Enabled collection of **performance counters** (CPU, memory, disk, and network).
+* Configured **Azure Monitor Logs** as the destination for collected telemetry data.
+* Verified end-to-end setup for **virtual machine monitoring using Azure Monitor Agent**.
+
 ### You have successfully completed the lab, click on Next to start the next lab
 
  

@@ -113,5 +113,18 @@ In this task, you will implement the Microsoft Defender for Cloud recommendation
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
    <validation step="b6cace8a-4562-4975-863b-5feceb7b1a70" />
- 
+
+## Summary
+
+In this lab, you have completed:
+
+* Enabled **Microsoft Defender for Cloud** for the Azure subscription.
+* Activated the **Servers** plan under Cloud Workload Protection (CWP).
+* Onboarded an **Azure Virtual Machine** to Microsoft Defender for Cloud monitoring.
+* Reviewed **security recommendations** provided by Microsoft Defender for Cloud.
+* Implemented **Just-In-Time (JIT) VM Access** to reduce exposure to network-based attacks.
+* Configured JIT access settings such as allowed ports, access duration, and source IPs.
+* Requested and validated **temporary access** to a JIT-protected virtual machine.
+* Understood how **Secure Score** reflects security posture and improvement progress.
+
 ### You have successfully completed the lab, click on Next to start the next lab

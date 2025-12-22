@@ -651,6 +651,19 @@ You will create a Console application using Visual Studio to load data into the 
 
    <validation step="9c0b0cd9-dab4-4395-a98a-0a4dbf1e8444" />
 
+## Summary
+
+In this lab, you have completed:
+
+* Deployed the base infrastructure using an **ARM template**, including an Azure VM and Azure SQL Database.
+* Created and configured an **Azure Key Vault** to securely store encryption keys and secrets.
+* Added a **Key Vault key** and a **secret** for secure credential and key management.
+* Registered an application in **Azure Active Directory** and configured access to Key Vault.
+* Granted the application permissions to access keys stored in Azure Key Vault.
+* Created a SQL database table and encrypted sensitive columns using **Always Encrypted**.
+* Used **Azure Key Vault-backed column master keys** for database encryption.
+* Verified encrypted data storage and secure data access using a **data-driven application**.
+
 ### You have successfully completed the lab
 	
 
