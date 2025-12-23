@@ -409,5 +409,20 @@ In this task, you will create a playbook. A security playbook is a collection of
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
    <validation step="61d471a2-0512-4d07-9e23-7393e56ef937" />
- 
+
+## Summary
+
+In this lab, you have completed:
+
+* Onboarded **Microsoft Sentinel** and connected it to an existing **Log Analytics workspace**.
+* Configured **Azure Activity** data connector to start collecting subscription-level activity logs.
+* Created an **analytics rule** based on Azure Activity data to detect suspicious operations.
+* Deployed a **Microsoft Sentinel playbook (Logic App)** using an ARM template.
+* Configured required **RBAC permissions** for Sentinel and the Logic App to enable automation.
+* Created a **custom scheduled analytics rule** to detect deletion of Just-In-Time (JIT) VM access policies.
+* Linked the **playbook as an automated response** to Sentinel alerts using automation rules.
+* Triggered a real incident by removing **JIT VM access**, validating alert generation and playbook execution.
+* Reviewed generated **alerts and incidents** within Microsoft Sentinel for investigation and response.
+
+
 ### You have successfully completed the lab

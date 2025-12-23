@@ -205,5 +205,16 @@ In this task, you will first configure server level auditing and then configure 
  
    <validation step="b614de5a-3bf9-4457-9566-2ebbaf298146" />
    
+## Summary
+
+In this lab, you have completed:
+
+* Deployed an **Azure SQL Server and Azure SQL Database** using an ARM template.
+* Enabled **Microsoft Defender for SQL** to protect against threats such as SQL injection and data exfiltration.
+* Reviewed **security recommendations and alerts** provided by Microsoft Defender for Cloud.
+* Discovered and classified sensitive data using **Data Discovery & Classification**.
+* Applied **sensitivity labels** to database columns for data protection and compliance.
+* Configured **server-level auditing** with log retention using an Azure Storage account.
+* Reviewed **database-level auditing logs** to monitor and track database activities.
 
 ### You have successfully completed the lab

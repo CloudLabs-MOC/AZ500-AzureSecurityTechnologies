@@ -652,4 +652,16 @@ In this task, you will connect to the myVMPrivate virtual machine via Remote Des
  
    <validation step="a34b7e41-b40a-47fc-b73d-1b8d40da1391" />
 
+## Summary
+
+In this lab, you have completed:
+
+* Created a **virtual network** with **Public** and **Private** subnets.
+* Configured **Network Security Groups (NSGs)** to restrict outbound internet access from the private subnet and allow RDP where required.
+* Enabled **service endpoint-based access control** to restrict Azure Storage access to the private subnet only.
+* Created an **Azure Storage account** with an **Azure File Share**.
+* Deployed virtual machines into both **private** and **public** subnets.
+* Verified that the **private subnet VM** can successfully access the Azure file share.
+* Confirmed that the **public subnet VM** is denied access to the storage account while retaining internet connectivity.
+
 ### You have successfully completed the lab

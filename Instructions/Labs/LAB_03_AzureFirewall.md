@@ -409,5 +409,16 @@ In this task, you will test the firewall to confirm that it works as expected.
 
 <validation step="d7fc707d-6388-4dd1-80f2-5092ff0d75a8" />
 
+## Summary
+In this lab, you have completed the following:
+
+* Deployed a virtual network with workload and jump host subnets
+* Installed and configured an **Azure Firewall**
+* Created and associated a **user-defined route (UDR)** to force outbound traffic through the firewall
+* Configured **application rules** to allow outbound access only to **[www.bing.com](http://www.bing.com)**
+* Configured **network rules** to allow outbound DNS traffic
+* Updated virtual machine DNS settings
+* Tested and validated firewall behavior for allowed and denied traffic
+
 ### You have successfully completed the lab.
 
