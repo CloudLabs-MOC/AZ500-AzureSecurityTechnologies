@@ -413,9 +413,17 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 
 1. In the pop that follows, click on **Yes**.    
 
-    >**Note**: Wait for the Remote Desktop session and **Server Manager** to load. Close Server Manager. 
-
     >**Note**: The remaining steps in this lab are performed within the Remote Desktop session to the **az500-10-vm1** Azure VM. 
+
+1. On the **az500-10-vm1** VM, Open **Server Manager (2)** from the task bar, select **Local Servers (3)**. Select **On (3)** on **IE Enhanced Security Configuration**.  Set **IE Enhanced Security Configuration** to **Off (4)** and then **Ok (5)**
+   
+    ![image](../images/az7l32.png)
+
+    >**Note**: Wait for the Remote Desktop session and **Server Manager** to load. 
+
+1. Make sure et **IE Enhanced Security Configuration** to **Off**.
+
+    ![image](../images/az7l33.png)
 
 1. Click **Start (1)**, in the **Start** menu, expand the **Microsoft SQL Server Tools 22 (2)** folder, and click the **SQL Server Management Studio 22 (3)** menu item.
 
@@ -526,14 +534,6 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 In this exercise, you will run a data-driven application to demonstrate how Azure Key Vault is used for encrypting an Azure SQL database, showcasing how to securely manage encryption keys for protecting data at rest.
 
 ### Task 1: Task 1: Install Visual Studio 2022
-
-1. From the RDP session to the **az500-10-vm1**, Open **Server Manager (2)** from the task bar, select **Local Servers (3)**. Select **On (3)** on **IE Enhanced Security Configuration**.  Set **IE Enhanced Security Configuration** to **Off (4)** and then **Ok (5)**
-
-    ![image](../images/az7l32.png)
-
-1. Make sure et **IE Enhanced Security Configuration** to **Off**.
-
-    ![image](../images/az7l33.png)
 
 1. From the Start button, search for **Visual Studio Installer (1)** and then select it **(2)**.    
 
