@@ -208,8 +208,6 @@ In this task, you will add a key to the Key Vault and view information about the
     $secret = Set-AZKeyVaultSecret -VaultName $kv.VaultName -Name 'SQLPassword' -SecretValue $secretvalue
     ```
 
-    ![image](../images/lab7-02-11.png)
-
     >**Note:** The name of the secret is SQLPassword. 
 
 1.  In the PowerShell session within the Cloud Shell pane, run the following to verify the secret was created.
@@ -218,7 +216,7 @@ In this task, you will add a key to the Key Vault and view information about the
     Get-AZKeyVaultSecret -VaultName $kv.VaultName
     ```
 
-     ![image](../images/az7l6.png)    
+     ![image](../images/lab7-02-11.png) 
 
 1. Minimize the Cloud Shell pane. 
 
@@ -430,13 +428,13 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 
     >**Note:** Wait for the Remote Desktop session and **Server Manager** to load. 
 
-1. Make sure et **IE Enhanced Security Configuration** to **Off**.
+1. Make sure that **IE Enhanced Security Configuration** to **Off**.
 
     ![image](../images/lab7-02-31.png)
 
 1. Click **Start (1)**, in the **Start** menu, expand the **Microsoft SQL Server Tools 22 (2)** folder, and click the **SQL Server Management Studio 22 (3)** menu item.
 
-    ![image](../images/gg16.png) 
+    ![image](../images/lab7-02-31.1.png) 
 
 1. Select **Skip and add account later**.
 
@@ -548,7 +546,7 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 
 In this exercise, you will run a data-driven application to demonstrate how Azure Key Vault is used for encrypting an Azure SQL database, showcasing how to securely manage encryption keys for protecting data at rest.
 
-### Task 1: Task 1: Install Visual Studio 2022
+### Task 1: Install Visual Studio 2026
 
 1. From the Start button, search for **Visual Studio Installer (1)** and then select it **(2)**.    
 
@@ -617,7 +615,7 @@ You will create a Console application using Visual Studio to load data into the 
 
 1. Return to the RDP session, and in the Visual Studio console, in the **Solution Explorer** window, click **Program.cs** and replace its content with the code you copied into Clipboard.
 
-    ![image](../images/lab7-02-42.png) 
+    ![image](../images/lab7-02-42n.png) 
 	
     - In the Visual Studio window, in the **Program.cs** pane, in line 15, replace the `<connection string noted earlier>` placeholder with the Azure SQL database **ADO.NET** connection string you recorded earlier in the lab. In the connection string, replace the `{your_password}` placeholder, with `Pa55w.rd1234`. If you saved the string on the lab computer, you may need to leave the RDP session to copy the ADO string, then return to the Azure virtual machine to paste it in.
 
@@ -629,7 +627,7 @@ You will create a Console application using Visual Studio to load data into the 
 
 1. In the Visual Studio console, click the **Start** button to initiate the build of the console application and start it.
 
-    ![image](../images/lab7-02-44.png) 
+    ![image](../images/lab7-02-44n.png) 
 
 1. The application will start a Command Prompt window. When prompted for password, type **Pa55w.rd1234** to connect to Azure SQL Database. 
 
