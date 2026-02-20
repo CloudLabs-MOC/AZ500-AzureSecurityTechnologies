@@ -65,7 +65,7 @@ In this task, you will implement the Microsoft Defender for Cloud recommendation
 
    ![image](../images/lab9-12-2.png)
 
-   >**Note:** If Just-in-time VM access cannot be enabled immediately, wait 5 minutes and try again.
+   >**Note:** If Just-in-Time VM access cannot be enabled immediately, please wait 5 minutes and try again. If it is still not enabled after waiting, kindly contact cloudlabs-support@spektrasystems.com for assistance.
 
 1. Under Just-in-time VM access, click on the link that reads **Open Microsoft Defender for Cloud**.
 
