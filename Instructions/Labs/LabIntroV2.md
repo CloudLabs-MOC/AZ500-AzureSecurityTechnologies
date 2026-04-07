@@ -42,7 +42,7 @@ Welcome to your Cloud Native Apps with Azure Services! We've prepared a seamless
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../images/SS0.png)
+![Access Your VM and Lab Guide](../images/cdn-nat-lab1-as1-g1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -82,11 +82,11 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
     >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
 
-2. Click **OK** to extend your lab duration.
+1. Click **OK** to extend your lab duration.
  
    ![Manage Your Virtual Machine](../images/gext2.png)
 
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
+1. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
      
 ## Let's Get Started with Azure Portal
  
@@ -94,27 +94,23 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
     ![Launch Azure Portal](../images/Getting.png)
  
-2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
+1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
       ![Enter Your Username](../images/AZ-500-siginazportal.png)
  
-3. Next, provide your password:
+1. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
      ![Enter Your Password](../images/AZ-500-pass.png)
-
-1. If you are directed to the **Security Defaults Enabled** pop up, please click on **Ask later**    
-   
-   ![](../images/AZ-500-security.png)
  
-4. If prompted to stay signed in, you can click "No."
+1. If prompted to stay signed in, you can click "No."
 
     ![](../images/AZ-500-staysignedin.png)
  
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
 ## Support Contact
 

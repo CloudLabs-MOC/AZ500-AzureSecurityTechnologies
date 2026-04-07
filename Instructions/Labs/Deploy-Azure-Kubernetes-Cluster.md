@@ -20,33 +20,43 @@ In this lab, you will complete the following exercise:
 
 In this exercise, we set up an Azure Kubernetes Service (AKS) cluster via the Azure portal. We create the AKS resource, configure basic settings such as subscription, resource group, cluster name, and region, and manage node pools by replacing the default with a new one configured with specific settings.
 
-1. In a new web browser window or tab, navigate to the Azure portal (``portal.azure.com``).
+1. On the Azure portal home page, select **Create a resource**.
 
-1. On the Azure portal home page, select **+ Create a resource** **(1)**, in the search bar **Azure Kubernetes Service aks** **(2)** click enter, click on  **Create** **(3)** and select **Azure Kubernetes Service (AKS)** **(4)**.
+    ![.](../images/cdn-nat-lab1-ex1-g1.png)
+  
+1. In the search bar, enter **Azure Kubernetes Service aks (1)** and select **azure kubernetes service aks (2)** from the results.
 
-    ![Aks create](../images/create-aks.png)
+    ![.](../images/cdn-nat-lab1-ex1-g2.png)
 
-1. On the **Basics** tab of **Create Kubernetes Cluster**, configure the following options and leave all other settings as default and click on **Next** **(11)**. 
+1. From the results, select **Create (1)** under **Azure Kubernetes Service (AKS) (2)**.
+
+    ![.](../images/cdn-nat-lab1-ex1-g3.png)
+
+1. On the **Basics** tab of **Create Kubernetes Cluster**, configure the following options and leave all other settings as default and click on **Next** **(12)**. 
 
     - **Subscription**: Select Avaiable Subscription **(1)**.
     - **Resource group**: Select **<inject key="resourcegroup" enableCopy="false"/>** **(2)**.
     - **Cluster preset configuration**: Select `Dev/Test` **(3)**.
     - **Kubernetes cluster name**: Enter **myAKSCluster-<inject key="DeploymentID"  enableCopy="false"/>** **(4)**.
     - **Region**: **<inject key="region"  enableCopy="false"/>** **(5)**.
-    - **Availability zones**: Select `None` **(6)**.
-    - **AKS pricing tier**: Select `free` **(7)**.
-    - **Kubernetes Version**: Select `default` version **(8)**.
-    - **Automatic upgrade**: Leave the setting set to the `Enabled with patch (recommended)` **(9)**.
-    - **Authentication and authorization**: Leave the setting set to `Local accounts with Kubernetes RBAC` **(10)**.
-        ![](../images/create-aks-basic.png)
+    - **Fleet Manager**: Select `None` **(6)**.
+    - **Availability zones**: Select `None` **(7)**.
+    - **AKS pricing tier**: Select `free` **(8)**.
+    - **Kubernetes Version**: Leave it to `default` version **(9)**.
+    - **Node security channel type**: Select **Node image** **(10)**.
+    - **Authentication and authorization**: Leave the setting set to `Local accounts with Kubernetes RBAC` **(11)**.
 
-1. On the **Node pools** tab, select **agentpool** **(1)** node pool, click on **Delete** **(2)** and click on **+ Add node pool** **(3)**.
+        ![](../images/cdn-nat-lab1-ex1-g4.png)
 
-    ![](../images/create-aks-delete.png)
+        ![](../images/cdn-nat-lab1-ex1-g5.png)
+
+1. On the **Node pools** tab, select **agentpool** **(1)** node pool, click on **Delete** **(2)**.
+
+    ![](../images/cdn-nat-lab1-ex1-g6.png)
   
-1. Select **Add a Virtual Machine Scale Set node pool** from the dropdown.
+1. In the **Node pools** tab, select **Add node pool (1)** and choose **Add a Virtual Machine Scale Set node pool (2)**.
 
-    ![](../images/a-sql-g1.png)
+    ![](../images/cdn-nat-lab1-ex1-g7.png)
 
 1. Enter the following detils in **Update node pool** tab and click on **Add** **(7)**.
 
@@ -54,20 +64,28 @@ In this exercise, we set up an Azure Kubernetes Service (AKS) cluster via the Az
     - **Mode**: Select `System` **(2)**
     - **OS SKU**: select `Ubuntu Linux` **(3)**.
     - **Availability zones**: setting to `None` **(4)**.
-    - **Node size**: select `Choose a size` **(5)**. 
-        - On the **Select a VM size** page, select `D2s_v3` **(1)**, then choose the `Select` **(2)** button.
-    
-    - **Scale method**: Leave the setting set to `Autoscale` **(6)**.
+  
+        ![](../images/cdn-nat-lab1-ex1-g8.png)
+  
+1. In the **Add a node pool** tab, select **Choose a size**.
 
-        ![](../images/add-new-node.png)
+    ![](../images/cdn-nat-lab1-ex1-g9.png)
 
-1. On the **Node pools** tab, click on **Review + create**.
+1. In the **Select a VM size** pane, enter **D2s_v3 (1)** in the search bar, expand **D-Series v3 (2)**, select **D2s_v3 (3)**, and then click **Select (4)**.
 
-    ![](../images/create-aks-click-review.png)
+    ![](../images/cdn-nat-lab1-ex1-g10.png)
 
-1. On the **Review + create** tab, click on **Create**.
+1. In the **Add a node pool** tab, ensure **Autoscale - Recommended (1)** is selected, and then click **Add (2)**.
 
-    ![](../images/new-review.png)
+    ![](../images/cdn-nat-lab1-ex1-g11.png)
+
+1. In the **Node pools** tab, verify the node pool configuration and select **Review + create**.
+
+    ![](../images/cdn-nat-lab1-ex1-g12.png)
+
+1. On the **Review + create** tab, verify the configuration and select **Create**.
+
+    ![](../images/cdn-nat-lab1-ex1-g13.png)
 
     > **Note**: The Deployment will take 5 to 10 minutes to create the AKS cluster, so you can proceed to the next exercise.
 
@@ -113,7 +131,7 @@ In this exercise, we connect to an AKS cluster. We start by opening the Cloud Sh
 
       ![](../images/create-aks-powershell-connect.png)
 
-1. Verify the connection to your cluster using `kubectl` to return a list of the cluster nodes.
+1. Verify the connection to your cluster using `kubectl` to return the cluster nodes.
 
       ```
       kubectl get nodes
@@ -121,7 +139,7 @@ In this exercise, we connect to an AKS cluster. We start by opening the Cloud Sh
 
       > The following example output shows the single node created in the previous steps. Make sure the node status is Ready.
 
-      ![](../images/create-aks-powershell-aks.png)
+      ![](../images/cdn-nat-lab1-ex1-g14.png)
 
 ### Exercise 3: Deploy the application
 
@@ -380,6 +398,8 @@ In this exercise, we deploy an application to an AKS cluster using a Kubernetes 
       type: LoadBalancer
     ```
 
+      ![](../images/cdn-nat-lab1-ex1-g15.png)
+
 1. **Save** the file by pressing **Ctrl+S** and close the file.
 
 1. Deploy the application using the `kubectl apply` command and specify the name of your YAML manifest:
@@ -401,6 +421,8 @@ In this exercise, we deploy an application to an AKS cluster using a Kubernetes 
     service/store-front created
     ```
 
+      ![](../images/cdn-nat-lab1-ex1-g16.png)
+
 ### Exercise 4: Test the application
 
 In this exercise, we test the deployed AKS application by ensuring it is running properly. First, we check the status of the pods to confirm they are running. Next, we monitor the service to get the public IP address of the store-front application. Once the public IP is available, we open a web browser to this IP address to access and view the Azure Store app in action. When the application runs, a Kubernetes service exposes the application's front end to the internet. This process can take a few minutes to complete.
@@ -411,7 +433,7 @@ In this exercise, we test the deployed AKS application by ensuring it is running
     kubectl get pods
     ```
 
-    ![](../images/a-sql-g8.png)
+    ![](../images/cdn-nat-lab1-ex1-g17.png)
 
 1. Check for a public IP address for the store-front application. Monitor progress using the [kubectl get service][kubectl-get] command with the `--watch` argument.
 
@@ -428,7 +450,7 @@ In this exercise, we test the deployed AKS application by ensuring it is running
 
     Once the **EXTERNAL-IP** address changes from *pending* to an actual public IP address, use `CTRL-C` to stop the `kubectl` watch process.
 
-      ![](../images/a-sql-g9.png)
+      ![](../images/cdn-nat-lab1-ex1-g18.png)
 
     The following example output shows a valid public IP address assigned to the service:
 
