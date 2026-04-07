@@ -26,22 +26,28 @@ You have been asked to deploy a proof of concept with Azure Container Registry a
 
 In this task, you will set up a resource group and an Azure Container Registry (ACR). We start by opening Cloud Shell in Bash and creating a new resource group and virtual network using Azure CLI commands. Next, you will verify the creation of the resource group and then create a new ACR instance with a unique name. Finally, you will confirm the creation of the ACR and record its name for future use.
 
-1. In the Azure portal, click on **Cloud Shell**, open it with the **>_** (1) button on the top of the Azure portal, and select `Bash` (2).
+1. On the Azure portal toolbar, select **Cloud Shell**.
 
-   ![](../images/Bash1.png)
+   ![](../images/cdn-nat-lab2-e21-g1.png)
 
-1. If you don't have a pre-created storage account, select **Mount storage account** and then click on **Apply**.
+1. In the **Welcome to Azure Cloud Shell** pane, select **Bash**.
 
-   ![](../images/Bash2.png)
+   ![](../images/cdn-nat-lab2-e21-g2.png)
+
+1. In the **Getting started** pane, select **Mount storage account (1)**, choose the available subscription in **Subscription (2)**, and then select **Apply (3)**.
+
+   ![](../images/cdn-nat-lab2-e21-g3.png)
+
+1. In the **Mount storage account** pane, select **I want to create a storage account (1)** and then choose **Next (2)**.
+
+   ![](../images/cdn-nat-lab2-e21-g4.png)
    
-1. Select **I want to create a storage**, click on **Next**. Provide all the details below. Click on **Create**.
+1. Provide the below details and then click on **Create**.
 
     - **Resource group**: Select the **<inject key="resourcegroup" enableCopy="true"/>**  Resource group.
     - **Region**: **<inject key="region"  enableCopy="false"/>**.
     - **Storage account**: Enter the name as **storage<inject key="DeploymentID"  enableCopy="false"/>** .
     - **File share**: Enter `blob` 
-
-        ![](../images/Bash3.png)
 
         ![](../images/Bash4.png)
 
