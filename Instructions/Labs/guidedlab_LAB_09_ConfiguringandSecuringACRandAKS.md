@@ -58,11 +58,15 @@ In this task, you will set up a resource group and an Azure Container Registry (
     az network vnet create --resource-group AZ500LAB04 --name AZ500LAB04-vnet --address-prefixes 10.0.0.0/16 --subnet-name default --subnet-prefix 10.0.0.0/24
     ```
 
+   ![](../images/cdn-nat-lab2-e21-g6.png)
+
 1. In the Bash session within the Cloud Shell pane, run the following to verify the resource group was created:
 
     ```
     az group list --query "[?name=='AZ500LAB04']" -o table
     ```
+
+   ![](../images/cdn-nat-lab2-e21-g7.png)
 
 1. In the Bash session within the Cloud Shell pane, run the following to create a new Azure Container Registry (ACR) instance (The name of the ACR must be globally unique): 
 
@@ -76,9 +80,9 @@ In this task, you will set up a resource group and an Azure Container Registry (
     az acr list --resource-group AZ500LAB04
     ```
 
-    >**Note**: Record the name of the ACR. You will need it in the next task.
+    >**Note**: Record the name of the ACR and save it to a notepad. You will need it in the next task.
     
-    ![](../images/lab9-(2).png)
+    ![](../images/cdn-nat-lab2-e21-g8.png)
    
 ### Task 2: Create a Dockerfile, build a container, and push it to Azure Container Registry
 
@@ -99,6 +103,8 @@ In this task, you will create a Dockerfile, build a container image from it, and
 
     az acr build --resource-group AZ500LAB04 --image sample/nginx:v1 --registry $ACRNAME --file Dockerfile .
     ```
+
+    ![](../images/cdn-nat-lab2-e21-g9.png)
 
     >**Note**: Wait for the command to successfully complete.
 
