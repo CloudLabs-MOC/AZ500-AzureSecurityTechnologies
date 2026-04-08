@@ -112,15 +112,19 @@ In this task, you will create a Dockerfile, build a container image from it, and
 
 1. In the Azure portal, scroll down and select **Resource groups**.
 
-   ![](./kubeimg1.png)
+    ![](../images/cdn-nat-lab2-e21-g10.png)
 
-1. Navigate to the **AZ500LAB04** resource group and, in the list of resources, click the entry representing the Azure Container Registry instance you provisioned in the previous task.
+1. In the **Resource groups** list, select **AZ500LAB04**.
 
-   ![](./kubeimg2.png)
+    ![](../images/cdn-nat-lab2-e21-g11.png)
 
-1. On the Container registry blade, in the **Services** section, click **Repositories**. Verify that the list of repositories includes the new container image named **sample/nginx**.
+1. In the **Resources** list, select the **Container registry** resource.
 
-   ![](./kubeimg3.png)
+    ![](../images/cdn-nat-lab2-e21-g12.png)
+
+1. In the **Container registry** blade, expand **Services (1)**, select **Repositories (2)**, and verify **sample/nginx (3)** is listed.
+
+    ![](../images/cdn-nat-lab2-e21-g13.png)
 
 1. Click the **sample/nginx** entry and verify presence of the **v1** tag that identifies the image version.
 
@@ -132,13 +136,13 @@ In this task, you will create a Dockerfile, build a container image from it, and
 
 In this task, you will create an Azure Kubernetes Service (AKS) cluster and review its resources. You will start by initiating the creation of a Kubernetes cluster in the Azure portal, configuring basic settings such as the cluster name, resource group, and region, and setting up node pools and networking. Once deployed, you will check the new resource group for AKS components and use Cloud Shell to connect to the cluster and verify its nodes are ready. 
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Kubernetes services** and press the **Enter** key.
+1. In the search bar, enter **Kubernetes services (1)** and select **Kubernetes services (2)** from the results.
 
-   ![](./kubeimg4.png)
+    ![](../images/cdn-nat-lab2-e21-g14.png)
 
-1. On the **Kubernetes services** blade, click **+ Create** and, in the drop-down menu, click **+ Create Kubernetes cluster**
+1. On the **Clusters** page, select **Create (1)** and choose **Kubernetes cluster (2)**.
 
-   ![](./kubeimg5.png)
+    ![](../images/cdn-nat-lab2-e21-g15.png)
 
 1. On the **Basics** tab of the **Create Kubernetes cluster** blade, for **Cluster preset configuration**, select **Dev/Test**. Now specify the following settings (leave others with their default values):
 
@@ -150,28 +154,38 @@ In this task, you will create an Azure Kubernetes Service (AKS) cluster and revi
     |Region|**(US) East US**|
     |Availability zones |**None**|
 
-1. Click **Next: Node Pools >**, on the **Node Pools** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
+    ![](../images/cdn-nat-lab2-e21-g16.png)
 
-    |Setting|Value|
-    |----|----|
-    |Enable virtual nodes|cleared checkbox|
+1. Click **Next: Node Pools >**.
 
-    ![](./kubeimg6.png)
-	
-1. Click **Next: Networking >**, on the **Networking** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
+1. On the **Node Pools** tab, ensure **Enable virtual nodes (1)** is unchecked, and then select **Next (2)**.
+
+    ![](../images/cdn-nat-lab2-e21-g17.png)
+
+1. On the **Networking** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
     |Setting|Value|
     |----|----|
     |Network configuration|**Azure CNI Node Subnet**|
     |DNS name prefix|**Leave the default value**|
 
+    ![](../images/cdn-nat-lab2-e21-g18.png)
+
     >**Note**: AKS can be configured as a private cluster. This assigns a private IP to the API server to ensure network traffic between your API server and your node pools remains on the private network only. For more information, visit [Create a private Azure Kubernetes Service cluster](https://docs.microsoft.com/en-us/azure/aks/private-clusters) page.
 
-1. Click **Next** twice so that you will be navigated to **Monitoring** tab. on the Monitoring tab of the Create Kubernetes cluster blade, uncheck the box of **Enable container logs** under Container Insights.
+1. Click **Next** so that you will be navigated to **Monitoring** tab.
+
+    ![](../images/cdn-nat-lab2-e21-g19.png)
+
+1. On the Monitoring tab of the Create Kubernetes cluster blade, **uncheck** the box of **Enable container logs (1)** under Container Insights and click Click **Review + Create (2)**
+
+    ![](../images/cdn-nat-lab2-e21-g20.png)
 
     >**Note**: In production scenarios, you would want to enable monitoring. Monitoring is disabled in this case since it is not covered in the lab. 
 
-1. Click **Review + Create** and then click **Create**.
+1. Review the configuration and select **Create**.
+
+    ![](../images/cdn-nat-lab2-e21-g21.png)
 
     >**Note**: Wait for the deployment to complete. This might take about 10 minutes.
 
@@ -187,19 +201,21 @@ In this task, you will create an Azure Kubernetes Service (AKS) cluster and revi
 
 1. In the Azure portal, open a Bash session in the Cloud Shell. 
 
-    >**Note**: Ensure **Bash** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
-
 1. In the Bash session within the Cloud Shell pane, run the following to connect to the Kubernetes cluster:
 
     ```sh
     az aks get-credentials --resource-group AZ500LAB04 --name MyKubernetesCluster
     ```
 
+    ![](../images/cdn-nat-lab2-e21-g22.png)
+
 1. In the Bash session within the Cloud Shell pane, run the following to list nodes of the Kubernetes cluster: 
 
     ```sh
     kubectl get nodes
     ```
+
+    ![](../images/cdn-nat-lab2-e21-g23.png)
 
     >**Note**: Verify that the **Status** of the cluster node is listed as **Ready**.
 
@@ -215,6 +231,8 @@ In this task, you will grant an Azure Kubernetes Service (AKS) cluster the neces
     az aks update -n MyKubernetesCluster -g AZ500LAB04 --attach-acr $ACRNAME
 
     ```
+
+    ![](../images/cdn-nat-lab2-e21-g24.png)
 
     >**Note**: This command grants the 'acrpull' role assignment to the ACR.
     >**Note**: It may take a few minutes for this command to complete.
@@ -240,25 +258,34 @@ In this task, you will grant an Azure Kubernetes Service (AKS) cluster the neces
    ```sh
    az aks update -n $AKS_CLUSTER_NAME -g <$RESOURCE_GROUP_NAME> --attach-acr /subscriptions/<$subscriptionId>/resourceGroups/<$RESOURCE_GROUP_NAME>/providers/Microsoft.ContainerRegistry/registries/<contosotradersacr$deploymentid>
    ```
+
+    ![](../images/cdn-nat-lab2-e21-g25.png)
+
     >**Note**: Kindly replace the Resource group <$RESOURCE_GROUP_NAME> with **$RG_AKS**, <$subscriptionId> with **<inject key="SubscriptionID" enableCopy="false"/>** and <contosotradersacr$deploymentid> with **ACR Name** which you recorded earlier.
 
 ### Task 5: Deploy an external service to AKS
 
 In this task, you'll deploy an external service to your Azure Kubernetes Service (AKS) cluster. Begin by uploading the necessary YAML manifest files for the external service to the Cloud Shell. Edit the `nginxexternal.yaml` file to replace the placeholder with the name of your Azure Container Registry (ACR). After saving your changes, apply the updated YAML file to the AKS cluster using `kubectl`. Finally, verify the deployment and service creation by reviewing the command output.
 
-1. In the Bash session within the Cloud Shell pane, click the **Manage files** icon, in the drop-down menu, click **Upload**, in the **Open** dialog box, naviate to the location where you downloaded the lab files, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\\nginxexternal.yaml** click **Open**. Next, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\\nginxinternal.yaml**, and click **Open**.
+1. In the Bash session within the Cloud Shell pane, click the **Manage files** icon, in the drop-down menu, click **Upload**, in the **Open** dialog box.
 
-    ![](../images/Bash5.png)
+    ![](../images/cdn-nat-lab2-e21-g26.png)
+
+1. Navigate to the lab files location, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\nginxexternal.yaml**, click **Open**, then select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\nginxinternal.yaml** and click **Open**.
+
+1. Verify that **nginxexternal.yaml** and **nginxinternal.yaml** are successfully uploaded.
    
+    ![](../images/cdn-nat-lab2-e21-g27.png)
+
 1. In the Bash session within the Cloud Shell pane, run the following to identify the name of the Azure Container Registry instance:
 
     ```sh
     echo $ACRNAME
     ```
 
-    >**Note**: Record the Azure Container Registry instance name. You will need it later in this task.
+    ![](../images/cdn-nat-lab2-e21-g28.png)
 
-    ![](../images/lab9-(3).png)
+    >**Note**: Record the Azure Container Registry instance name. You will need it later in this task.
  
 1. In the Bash session within the Cloud Shell pane, run the following to open the nginxexternal.yaml file, so you can edit its content. 
 
@@ -282,9 +309,9 @@ In this task, you'll deploy an external service to your Azure Kubernetes Service
     kubectl apply -f nginxexternal.yaml
     ```
 
-1. In the Bash session within the Cloud Shell pane, review the output of the command you ran in the previous task to verify that the deployment and the corresponding service have been created. 
+1. In the **Cloud Shell** pane, review the command output to verify that the deployment and corresponding service are created.
 
-   ![](../images/external-1.png)
+    ![](../images/cdn-nat-lab2-e21-g29.png)
   
 ### Task 6: Verify that you can access an external AKS-hosted service
 
@@ -298,7 +325,7 @@ In this task, you will verify that the container can be accessed externally usin
 
 1. In the Bash session within the Cloud Shell pane, review the output and record the value in the External-IP column. You will need it in the next step. 
 
-    ![](../images/Externalip.png)
+    ![](../images/cdn-nat-lab2-e21-g30.png)
 
 1. Open a new broswer and browse to the IP address you identified in the previous step.
 
@@ -332,7 +359,7 @@ In this task, you'll deploy a service within the AKS cluster that is only access
 
 1.  In the Bash session within the Cloud Shell pane, review the output to verify your deployment and the service has been created:
 
-    ![](../images/internal1-1.png)
+    ![](../images/cdn-nat-lab2-e21-g31.png)
 
 1. In the Bash session within the Cloud Shell pane, run the following to retrieve information about the nginxinternal service, including name, type, IP addresses, and ports. 
 
@@ -341,6 +368,8 @@ In this task, you'll deploy a service within the AKS cluster that is only access
     ```
 
 1. In the Bash session within the Cloud Shell pane, review the output. The External-IP is, in this case, a private IP address. It will be in **Pending** state, so you could use the **CLUSTER-IP** address.
+
+    ![](../images/cdn-nat-lab2-e21-g33.png)
 
     >**Note**: Record this IP address. You will need it in the next task. 
 
@@ -356,9 +385,11 @@ In this task, you will verify access to the internal service hosted on AKS by us
     kubectl get pods
     ```
 
+   ![](../images/cdn-nat-lab2-e21-g34.png)
+
 1. In the listing of the pods, copy the first entry in the **NAME** column.
 
-   ![](../images/name.png)
+   ![](../images/cdn-nat-lab2-e21-g35.png)
 
    >**Note**: This is the pod you will use in the subsequent steps.
 
@@ -373,6 +404,8 @@ In this task, you will verify access to the internal service hosted on AKS by us
     ```sh
     curl http://<internal_IP>
     ```
+
+   ![](../images/cdn-nat-lab2-e21-g36.png)
 
 1. Close the Cloud Shell pane.
 
