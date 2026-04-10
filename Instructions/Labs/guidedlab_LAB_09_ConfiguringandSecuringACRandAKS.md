@@ -9,18 +9,18 @@ You have been asked to deploy a proof of concept with Azure Container Registry a
 - Configuring an Azure Kubernetes Service.
 - Securing and accessing container applications both internally and externally. 
 
-   > For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
+   > For all the resources in this lab, we are using the **East US** region. Verify with your instructor that this is the region to use for class. 
 
 ## Lab Objectives
 
 - Task 1: Create an Azure Container Registry.
-- Task 2: Create a Dockerfile, build a container and push it to Azure Container Registry.
+- Task 2: Create a Dockerfile, build a container, and push it to Azure Container Registry.
 - Task 3: Create an Azure Kubernetes Service cluster.
 - Task 4: Grant the AKS cluster permissions to access the ACR.
 - Task 5: Deploy an external service to AKS.
-- Task 6: Verify the you can access an external AKS-hosted service.
+- Task 6: Verify that you can access an external AKS-hosted service.
 - Task 7: Deploy an internal service to AKS.
-- Task 8: Verify the you can access an internal AKS-hosted service.
+- Task 8: Verify that you can access an internal AKS-hosted service.
 
 ### Task 1: Create an Azure Container Registry
 
@@ -42,7 +42,7 @@ In this task, you will set up a resource group and an Azure Container Registry (
 
    ![](../images/cdn-nat-lab2-e21-g4.png)
    
-1. Provide the below details and then click on **Create**.
+1. Provide the details below and then click on **Create**.
 
     - **Resource group**: Select the **<inject key="resourcegroup" enableCopy="true"/>**  Resource group.
     - **Region**: **<inject key="region"  enableCopy="false"/>**.
@@ -96,7 +96,7 @@ In this task, you will create a Dockerfile, build a container image from it, and
 
 1. In the Bash session within the Cloud Shell pane, run the following to build an image from the Dockerfile and push the image to the new ACR. 
 
-    >**Note**: The trailing period at the end of the command line is required. It designates the current directory as the location of Dockerfile. 
+    >**Note**: The trailing period at the end of the command line is required. It designates the current directory as the location of the Dockerfile. 
 
     ```sh
     ACRNAME=$(az acr list --resource-group AZ500LAB04 --query '[].{Name:name}' --output tsv)
@@ -177,7 +177,7 @@ In this task, you will create an Azure Kubernetes Service (AKS) cluster and revi
 
     ![](../images/cdn-nat-lab2-e21-g19.png)
 
-1. On the Monitoring tab of the Create Kubernetes cluster blade, **uncheck** the box of **Enable container logs (1)** under Container Insights and click Click **Review + Create (2)**
+1. On the Monitoring tab of the Create Kubernetes cluster blade, **uncheck** the box of **Enable container logs (1)** under Container Insights and click **Review + Create (2)**
 
     ![](../images/cdn-nat-lab2-e21-g20.png)
 
@@ -287,7 +287,7 @@ In this task, you'll deploy an external service to your Azure Kubernetes Service
 
     >**Note**: Record the Azure Container Registry instance name. You will need it later in this task.
  
-1. In the Bash session within the Cloud Shell pane, run the following to open the nginxexternal.yaml file, so you can edit its content. 
+1. In the Bash session within the Cloud Shell pane, run the following to open the nginxexternal.YAML file, so you can edit its content. 
 
     ```sh
     code ./nginxexternal.yaml
@@ -301,7 +301,7 @@ In this task, you'll deploy an external service to your Azure Kubernetes Service
 
     ![](../images/lab9-4-1.png)
    
-1. Now to save this edited YAML file, perform **CTRL + S** and then **CTRL + Q** to exit. 
+1. Now, to save this edited YAML file, perform **CTRL + S** and then **CTRL + Q** to exit. 
 
 1. In the Bash session within the Cloud Shell pane, run the following to apply the change to the cluster:
 
@@ -327,7 +327,7 @@ In this task, you will verify that the container can be accessed externally usin
 
     ![](../images/cdn-nat-lab2-e21-g30.png)
 
-1. Open a new broswer and browse to the IP address you identified in the previous step.
+1. Open a new browser and browse to the IP address you identified in the previous step.
 
 1. Ensure the **Welcome to nginx!** page displays. 
 
@@ -337,7 +337,7 @@ In this task, you will verify that the container can be accessed externally usin
 
 In this task, you'll deploy a service within the AKS cluster that is only accessible internally. First, update the configuration file to include the correct Azure Container Registry name, then apply these changes to the cluster. After deploying, find and note the private IP address assigned to this service, which you'll use to access the service from within the cluster.
 
-1. In the Bash session within the Cloud Shell pane, run the following to open the nginxintenal.yaml file, so you can edit its content. 
+1. In the Bash session within the Cloud Shell pane, run the following to open the nginx internal.YAML file, so you can edit its content. 
 
     ```sh
     code ./nginxinternal.yaml
@@ -349,7 +349,7 @@ In this task, you'll deploy a service within the AKS cluster that is only access
 
    ![](../images/internal.png)
 
-1. Now to save this edited yaml file, perform CTRL + S and then CTRL + Q to exit. 
+1. Now, to save this edited YAML file, perform CTRL + S and then CTRL + Q to exit. 
 
 1. In the Bash session within the Cloud Shell pane, run the following to apply the change to the cluster:
 
@@ -357,7 +357,7 @@ In this task, you'll deploy a service within the AKS cluster that is only access
     kubectl apply -f nginxinternal.yaml
     ```
 
-1.  In the Bash session within the Cloud Shell pane, review the output to verify your deployment and the service has been created:
+1.  In the Bash session within the Cloud Shell pane, review the output to verify your deployment and that the service has been created:
 
     ![](../images/cdn-nat-lab2-e21-g31.png)
 
@@ -367,7 +367,7 @@ In this task, you'll deploy a service within the AKS cluster that is only access
     kubectl get service nginxinternal
     ```
 
-1. In the Bash session within the Cloud Shell pane, review the output. The External-IP is, in this case, a private IP address. It will be in **Pending** state, so you could use the **CLUSTER-IP** address.
+1. In the Bash session within the Cloud Shell pane, review the output. The External-IP is, in this case, a private IP address. It will be in the **Pending** state, so you could use the **CLUSTER-IP** address.
 
     ![](../images/cdn-nat-lab2-e21-g33.png)
 
@@ -375,7 +375,7 @@ In this task, you'll deploy a service within the AKS cluster that is only access
 
     >**Note**: To access the internal service endpoint, you will connect interactively to one of the pods running in the cluster. 
 
-### Task 8: Verify the you can access an internal AKS-hosted service
+### Task 8: Verify that you can access an internal AKS-hosted service
 
 In this task, you will verify access to the internal service hosted on AKS by using one of the cluster's pods. Start by listing the available pods and selecting one to use. Connect to this pod interactively and then check if you can reach the internal service using its private IP address.
 
