@@ -91,9 +91,9 @@ In this exercise, we set up an Azure Kubernetes Service (AKS) cluster via the Az
 
 ### Exercise 2: Connect to the Cluster
 
-In this exercise, we connect to an AKS cluster. We start by opening the Cloud Shell in the Azure portal, select PowerShell, and set up a storage account if necessary. We then configure the connection to our Kubernetes cluster and verify it by checking the cluster nodes to ensure they are ready.
+In this exercise, we connect to an AKS cluster. We start by opening the Cloud Shell in the Azure portal, selecting PowerShell, and setting up a storage account if necessary. We then configure the connection to our Kubernetes cluster and verify it by checking the cluster nodes to ensure they are ready.
 
-1. In the Azure portal click on **Cloud Shell**
+1. In the Azure portal, click on **Cloud Shell**
 
       ![](../images/a-sql-g2.png)
 
@@ -110,7 +110,7 @@ In this exercise, we connect to an AKS cluster. We start by opening the Cloud Sh
       ![](../images/a-sql-g5.png)
 
 
-1. Provide all the below details Click on **Create**.
+1. Provide all the details below. Click on **Create**.
 
       - **Resource group**: Select the **<inject key="resourcegroup" enableCopy="false"/>**  Resource group.
       - **Region**: **<inject key="region"  enableCopy="false"/>**.
@@ -127,7 +127,7 @@ In this exercise, we connect to an AKS cluster. We start by opening the Cloud Sh
 
       > **Note**: Replace `<resouresegroupname>` with **<inject key="resourcegroup" enableCopy="true"/>**  and `<myAKSClustername>` with **myAKSCluster-<inject key="DeploymentID"  enableCopy="true"/>**.
 
-1. Confirm Do you want to import the Kubernetes config?, type `y` and press `Enter`.
+1. Confirm, do you want to import the Kubernetes config? Type `y` and press `Enter`.
 
       ![](../images/create-aks-powershell-connect.png)
 
@@ -152,22 +152,22 @@ In this exercise, we deploy an application to an AKS cluster using a Kubernetes 
 - **Order service**: Places orders.
 - **Rabbit MQ**: Message queue for an order queue.
 
-1. Create a file named `aks-store-quickstart.yaml` by running below command.
+1. Create a file named `aks-store-quickstart.yaml` by running the command below.
 
     ```
     code aks-store-quickstart.yaml
     ```
-1. After running the command a pop-up window will show up. click on **confirm**. it will take you to the classic powershell terminal.
+1. After running the command, a pop-up window will show up. click on **confirm**. It will take you to the classic PowerShell terminal.
  
      ![](../images/a-sql-g7.png)
 
-1. Run the below command again, it will open the code editor.
+1. Run the command below again, and it will open the code editor.
 
    ```
    code aks-store-quickstart.yaml
    ```
    
-1. Copy and Paste the following manifest into the editor:
+1. Copy and paste the following manifest into the editor:
 
     ```yaml
     apiVersion: apps/v1
@@ -425,7 +425,7 @@ In this exercise, we deploy an application to an AKS cluster using a Kubernetes 
 
 ### Exercise 4: Test the application
 
-In this exercise, we test the deployed AKS application by ensuring it is running properly. First, we check the status of the pods to confirm they are running. Next, we monitor the service to get the public IP address of the store-front application. Once the public IP is available, we open a web browser to this IP address to access and view the Azure Store app in action. When the application runs, a Kubernetes service exposes the application's front end to the internet. This process can take a few minutes to complete.
+In this exercise, we test the deployed AKS application by ensuring it is running properly. First, we check the status of the pods to confirm they are running. Next, we monitor the service to get the public IP address of the storefront application. Once the public IP is available, we open a web browser to this IP address to access and view the Azure Store app in action. When the application runs, a Kubernetes service exposes the application's front end to the internet. This process can take a few minutes to complete.
 
 1. Check the status of the deployed pods using the [kubectl get pods][kubectl-get] command. Make sure all pods are `Running` before proceeding.
 
@@ -435,7 +435,7 @@ In this exercise, we test the deployed AKS application by ensuring it is running
 
     ![](../images/cdn-nat-lab1-ex1-g17.png)
 
-1. Check for a public IP address for the store-front application. Monitor progress using the [kubectl get service][kubectl-get] command with the `--watch` argument.
+1. Check for a public IP address for the storefront application. Monitor progress using the [kubectl get service][kubectl-get] command with the `--watch` argument.
 
     ```azurecli
     kubectl get service store-front --watch
@@ -463,7 +463,7 @@ In this exercise, we test the deployed AKS application by ensuring it is running
 
       ![](../images/aks-output1.png)
 
-> Result: You have Deploy Azure Kubernetes Cluster
+> Result: You have deployed an Azure Kubernetes Cluster
 
 ## Review
 In this lab, you will complete the following tasks:
