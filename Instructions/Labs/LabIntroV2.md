@@ -64,15 +64,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../images/SS3.png)
-
-## Lab Validation
-
-1. After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
-
-   ![Inline Validation](../images/SS0v.png)
-
-1. If you need any assistance, please contact us at labs-support@spektrasystems.com.
+![Manage Your Virtual Machine](../images/m36-gt-lab-gs-g5.png)
 
 ## **Lab Duration Extension**
 
@@ -96,19 +88,19 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   - **Email:** <inject key="AzureAdUserEmail"></inject>
  
-      ![Enter Your Username](../images/AZ-500-siginazportal.png)
+      ![Enter Your Username](../images/m36-gt-lab-gs-g8.png)
  
-1. Next, provide your password:
+1. Next, provide the **Temporary Access Pass**:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
  
-     ![Enter Your Password](../images/AZ-500-pass.png)
+     ![Enter Your Password](../images/m36-gt-lab-gs-g9.png)
  
 1. If prompted to stay signed in, you can click "No."
 
-    ![](../images/AZ-500-staysignedin.png)
+    ![](../images/m36-gt-lab-gs-g10.png)
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
