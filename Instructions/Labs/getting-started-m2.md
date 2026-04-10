@@ -10,15 +10,15 @@ In this lab, you will configure and secure Azure Container Registry (ACR) and Az
 
 The objective of this lab is to provide hands-on experience with deploying and managing resources on Azure Kubernetes Service (AKS). By the end of this lab, you will be able to:
 
-- **Configuring and Securing ACR and AKS** : Involves setting up Azure Container Registry to store Docker images and configuring Azure Kubernetes Service to securely access and deploy those images.
+- **Configuring and Securing ACR and AKS**: Involves setting up Azure Container Registry to store Docker images and configuring Azure Kubernetes Service to securely access and deploy those images.
 
 ## Prerequisites
 
 Participants should have:
 
-- **Azure Platform Understanding:** Basic knowledge of Azure services, including Azure Kubernetes service.
+- **Azure Platform Understanding:** Basic knowledge of Azure services, including Azure Kubernetes Service.
 
-- **Basic Knowledge of Kubernetes:** A basic understanding of Kubernetes concepts such as pods, containers, deployments, services.
+- **Basic Knowledge of Kubernetes:** A basic understanding of Kubernetes concepts such as pods, containers, deployments, and services.
 
 - **Understanding of Docker:** Understanding the fundamentals of Docker, including creating Dockerfiles, building images, and pushing/pulling images to/from a registry.
 
@@ -26,7 +26,7 @@ Participants should have:
 
 This architecture illustrates the process of storing Docker images in Azure Container Registry (ACR) and deploying them to Azure Kubernetes Service (AKS). A Dockerfile is used to build container images, which are then pushed to ACR. The AKS cluster is configured to securely pull images from ACR and deploy them as external or internal services, ensuring efficient management and orchestration of containerized applications.
 
-## Architechture Diagram
+## Architecture Diagram
 
 ![](../images/kubearch2.png)
 
@@ -68,15 +68,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../images/SS03.png)
-
-## Lab Validation
-
-1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
-
-   ![Inline Validation](../images/SS0v.png)
-
-1. If you need any assistance, please contact us at labs-support@spektrasystems.com.
+![Manage Your Virtual Machine](../images/m36-gt-lab-gs-g5.png)
 
 ## **Lab Duration Extension**
 
@@ -86,11 +78,11 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
     >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
 
-2. Click **OK** to extend your lab duration.
+1. Click **OK** to extend your lab duration.
  
    ![Manage Your Virtual Machine](../images/gext2.png)
 
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
+1. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
      
 ## Let's Get Started with Azure Portal
  
@@ -98,27 +90,23 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
     ![Launch Azure Portal](../images/Getting.png)
  
-2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
+1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   - **Email:** <inject key="AzureAdUserEmail"></inject>
  
-      ![Enter Your Username](../images/AZ-500-siginazportal.png)
+      ![Enter Your Username](../images/m36-gt-lab-gs-g8.png)
  
-3. Next, provide your password:
+1. Next, provide your **Temporary Access Pass**:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
  
-     ![Enter Your Password](../images/AZ-500-pass.png)
+     ![Enter Your Password](../images/m36-gt-lab-gs-g9.png)
+ 
+1. If prompted to stay signed in, you can click "No."
 
-1. If you are directed to the **Security Defaults Enabled** pop up, please click on **Ask later**    
-   
-   ![](../images/AZ-500-security.png)
+    ![](../images/m36-gt-lab-gs-g10.png)
  
-4. If prompted to stay signed in, you can click "No."
-
-    ![](../images/AZ-500-staysignedin.png)
- 
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
 ## Support Contact
 
