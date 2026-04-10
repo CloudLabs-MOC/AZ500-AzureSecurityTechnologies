@@ -10,15 +10,15 @@ In this lab, you will configure and secure Azure Container Registry (ACR) and Az
 
 The objective of this lab is to provide hands-on experience with deploying and managing resources on Azure Kubernetes Service (AKS). By the end of this lab, you will be able to:
 
-- **Configuring and Securing ACR and AKS** : Involves setting up Azure Container Registry to store Docker images and configuring Azure Kubernetes Service to securely access and deploy those images.
+- **Configuring and Securing ACR and AKS**: Involves setting up Azure Container Registry to store Docker images and configuring Azure Kubernetes Service to securely access and deploy those images.
 
 ## Prerequisites
 
 Participants should have:
 
-- **Azure Platform Understanding:** Basic knowledge of Azure services, including Azure Kubernetes service.
+- **Azure Platform Understanding:** Basic knowledge of Azure services, including Azure Kubernetes Service.
 
-- **Basic Knowledge of Kubernetes:** A basic understanding of Kubernetes concepts such as pods, containers, deployments, services.
+- **Basic Knowledge of Kubernetes:** A basic understanding of Kubernetes concepts such as pods, containers, deployments, and services.
 
 - **Understanding of Docker:** Understanding the fundamentals of Docker, including creating Dockerfiles, building images, and pushing/pulling images to/from a registry.
 
@@ -26,7 +26,7 @@ Participants should have:
 
 This architecture illustrates the process of storing Docker images in Azure Container Registry (ACR) and deploying them to Azure Kubernetes Service (AKS). A Dockerfile is used to build container images, which are then pushed to ACR. The AKS cluster is configured to securely pull images from ACR and deploy them as external or internal services, ensuring efficient management and orchestration of containerized applications.
 
-## Architechture Diagram
+## Architecture Diagram
 
 ![](../images/kubearch2.png)
 
@@ -69,14 +69,6 @@ For convenience, you can open the lab guide in a separate window by selecting th
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
 ![Manage Your Virtual Machine](../images/SS03.png)
-
-## Lab Validation
-
-1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
-
-   ![Inline Validation](../images/SS0v.png)
-
-1. If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ## **Lab Duration Extension**
 
