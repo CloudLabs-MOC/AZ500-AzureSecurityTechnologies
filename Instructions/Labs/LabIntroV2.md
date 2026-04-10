@@ -16,15 +16,15 @@ The objective of this lab is to provide hands-on experience with deploying and m
 
 Participants should have:
 
-- **Azure Platform Understanding:** Basic knowledge of Azure services, including Azure Kubernetes service.
+- **Azure Platform Understanding:** Basic knowledge of Azure services, including Azure Kubernetes Service.
 
-- **Basic Knowledge of Kubernetes:** A basic understanding of Kubernetes concepts such as pods, containers, deployments, services.
+- **Basic Knowledge of Kubernetes:** A basic understanding of Kubernetes concepts such as pods, containers, deployments, and services.
 
 ## Architechture
 
 This architecture illustrates the flow of deploying and managing a multi-container application using Azure Kubernetes Service (AKS). The process begins with the Azure Portal, where an AKS cluster is created and configured. Within the AKS cluster, multiple components are deployed as separate pods, including the storefront, product service, order service, and order queue. These microservices work together to simulate a retail scenario, with each service running independently but communicating seamlessly within the Kubernetes environment. The architecture ensures scalability, high availability, and efficient management of containerized applications in the cloud.
 
-## Architechture Diagram
+## Architecture Diagram
 
 ![](../images/kubearch1.png)
 
@@ -68,7 +68,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 ## Lab Validation
 
-1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+1. After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
    ![Inline Validation](../images/SS0v.png)
 
