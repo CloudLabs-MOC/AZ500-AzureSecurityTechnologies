@@ -56,13 +56,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment Details** tab.
  
-![Explore Lab Resources](../images/SS01.png)
+![Explore Lab Resources](../images/new02.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../images/SS02.png)
+![Use the Split Window Feature](../images/new3.png)
  
 ## Managing Your Virtual Machine
  
@@ -70,19 +70,11 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 ![Manage Your Virtual Machine](../images/m36-gt-lab-gs-g5.png)
 
-## **Lab Duration Extension**
+## Lab Guide Zoom In/Zoom Out
 
-1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-    ![Manage Your Virtual Machine](../images/gext.png)
-
-    >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
-
-1. Click **OK** to extend your lab duration.
- 
-   ![Manage Your Virtual Machine](../images/gext2.png)
-
-1. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
+![Manage Your Virtual Machine](../images/new1.png)
      
 ## Let's Get Started with Azure Portal
  
