@@ -42,12 +42,12 @@ In this task, you will set up a resource group and an Azure Container Registry (
 
    ![](../images/cdn-nat-lab2-e21-g4.png)
    
-1. Provide the details below and then click on **Create**.
+1. Provide the details below and then click on **Create (5)**.
 
-    - **Resource group**: Select the **<inject key="resourcegroup" enableCopy="true"/>**  Resource group.
-    - **Region**: **<inject key="region"  enableCopy="false"/>**.
-    - **Storage account**: Enter the name as **storage<inject key="DeploymentID"  enableCopy="false"/>** .
-    - **File share**: Enter `blob` 
+    - **Resource group (1)**: Select the **<inject key="resourcegroup" enableCopy="true"/>**  Resource group.
+    - **Region (2)**: **<inject key="region"  enableCopy="false"/>**.
+    - **Storage account (3)**: Enter the name as **storage<inject key="DeploymentID"  enableCopy="false"/>** .
+    - **File share (4)**: Enter `blob` 
 
         ![](../images/Bash4.png)
 
@@ -144,15 +144,15 @@ In this task, you will create an Azure Kubernetes Service (AKS) cluster and revi
 
     ![](../images/cdn-nat-lab2-e21-g15.png)
 
-1. On the **Basics** tab of the **Create Kubernetes cluster** blade, for **Cluster preset configuration**, select **Dev/Test**. Now specify the following settings (leave others with their default values):
+1. On the **Basics** tab of the **Create Kubernetes cluster** blade, for **Cluster preset configuration (3)**, select **Dev/Test**. Now specify the following settings (leave others with their default values):
 
     |Setting|Value|
     |----|----|
-    |Subscription|the name of the Azure subscription you are using in this lab|
-    |Resource group|**AZ500LAB04**|
-    |Kubernetes cluster name|**MyKubernetesCluster**|
-    |Region|**(US) East US**|
-    |Availability zones |**None**|
+    |Subscription **(1)**|the name of the Azure subscription you are using in this lab|
+    |Resource group **(2)**|**AZ500LAB04**|
+    |Kubernetes cluster name **(4)**|**MyKubernetesCluster**|
+    |Region **(5)**|**(US) East US**|
+    |Availability zones|**None**|
 
     ![](../images/cdn-nat-lab2-e21-g16.png)
 
@@ -162,12 +162,12 @@ In this task, you will create an Azure Kubernetes Service (AKS) cluster and revi
 
     ![](../images/cdn-nat-lab2-e21-g17.png)
 
-1. On the **Networking** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
+1. On the **Networking** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values) and click **Create (3)**:
 
     |Setting|Value|
     |----|----|
-    |Network configuration|**Azure CNI Node Subnet**|
-    |DNS name prefix|**Leave the default value**|
+    |Network configuration **(1)**|**Azure CNI Node Subnet**|
+    |DNS name prefix **(2)**|**Leave the default value**|
 
     ![](../images/cdn-nat-lab2-e21-g18.png)
 
@@ -271,7 +271,7 @@ In this task, you'll deploy an external service to your Azure Kubernetes Service
 
     ![](../images/cdn-nat-lab2-e21-g26.png)
 
-1. Navigate to the lab files location, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\nginxexternal.yaml**, click **Open**, then select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\nginxinternal.yaml** and click **Open**.
+1. Navigate to the lab files location, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\09\nginxexternal.yaml**, click **Open**, then select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\nginxinternal.yaml** and click **Open**.
 
 1. Verify that **nginxexternal.yaml** and **nginxinternal.yaml** are successfully uploaded.
    
@@ -332,7 +332,9 @@ In this task, you will verify that the container can be accessed externally usin
 1. Ensure the **Welcome to nginx!** page displays. 
 
     ![](../images/nginx.png)
-  
+   
+   >**Note:** Use `http://<EXTERNAL-IP>` — not `https://`.
+
 ### Task 7: Deploy an internal service to AKS
 
 In this task, you'll deploy a service within the AKS cluster that is only accessible internally. First, update the configuration file to include the correct Azure Container Registry name, then apply these changes to the cluster. After deploying, find and note the private IP address assigned to this service, which you'll use to access the service from within the cluster.
@@ -345,11 +347,11 @@ In this task, you'll deploy a service within the AKS cluster that is only access
 
     >**Note**: This is the *internal* yaml file.
 
-1. In the editor pane, scroll down to the line containing the reference to the container image and replace the **`<ACRUniquename>`** placeholder with the ACR name.
+1. In the editor pane, scroll down to the **line 24** containing the reference to the container image and replace the **`<ACRUniquename>`** placeholder with the ACR name.
 
    ![](../images/internal.png)
 
-1. Now, to save this edited YAML file, perform CTRL + S and then CTRL + Q to exit. 
+1. Now, to save this edited YAML file, perform **CTRL + S** and then **CTRL + Q** to exit. 
 
 1. In the Bash session within the Cloud Shell pane, run the following to apply the change to the cluster:
 
