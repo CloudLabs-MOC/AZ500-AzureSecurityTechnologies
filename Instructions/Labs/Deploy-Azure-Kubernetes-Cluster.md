@@ -461,6 +461,8 @@ In this exercise, we test the deployed AKS application by ensuring it is running
 1. Open a web browser to the external IP address of your service to see the Azure Store app in action.
 
       ![](../images/aks-output1.png)
+      
+      >**Note:** Browse to the external IP using **http://**, not **https://**.
 
       >Result: You have deployed an Azure Kubernetes Cluster
 
