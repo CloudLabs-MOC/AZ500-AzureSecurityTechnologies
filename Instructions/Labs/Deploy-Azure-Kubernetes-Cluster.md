@@ -28,7 +28,7 @@ In this exercise, we set up an Azure Kubernetes Service (AKS) cluster via the Az
 
     ![.](../images/cdn-nat-lab1-ex1-g2.png)
 
-1. From the results, select **Create (1)** under **Azure Kubernetes Service (AKS) (2)**.
+1. From the results, select **Create (1)**, then select **Azure Kubernetes Service (AKS) (2)**.
 
     ![.](../images/cdn-nat-lab1-ex1-g3.png)
 
@@ -67,7 +67,7 @@ In this exercise, we set up an Azure Kubernetes Service (AKS) cluster via the Az
   
         ![](../images/cdn-nat-lab1-ex1-g8.png)
   
-1. In the **Add a node pool** tab, select **Choose a size**.
+1. In the **Add a node pool** tab, on **Node size**, select **Choose a size**.
 
     ![](../images/cdn-nat-lab1-ex1-g9.png)
 
@@ -75,7 +75,7 @@ In this exercise, we set up an Azure Kubernetes Service (AKS) cluster via the Az
 
     ![](../images/cdn-nat-lab1-ex1-g10.png)
 
-1. In the **Add a node pool** tab, ensure **Autoscale - Recommended (1)** is selected, and then click **Add (2)**.
+1. In the **Add a node pool** tab, on Scale method, ensure **Autoscale - Recommended (1)** is selected, and then click **Add (2)**.
 
     ![](../images/cdn-nat-lab1-ex1-g11.png)
 
@@ -109,13 +109,12 @@ In this exercise, we connect to an AKS cluster. We start by opening the Cloud Sh
 
       ![](../images/a-sql-g5.png)
 
+1. Provide all the details below. Click on **Create (5)**.
 
-1. Provide all the details below. Click on **Create**.
-
-      - **Resource group**: Select the **<inject key="resourcegroup" enableCopy="false"/>**  Resource group.
-      - **Region**: **<inject key="region"  enableCopy="false"/>**.
-      - **Storage account**: Enter the name as **storage<inject key="DeploymentID"  enableCopy="false"/>** .
-      - **File share**: Enter `blob` 
+      - **Resource group (1)**: Select the **<inject key="resourcegroup" enableCopy="false"/>**  Resource group.
+      - **Region (2)**: **<inject key="region"  enableCopy="false"/>**.
+      - **Storage account (3)**: Enter the name as **storage<inject key="DeploymentID"  enableCopy="false"/>** .
+      - **File share (4)**: Enter `blob` 
 
         ![](../images/a-sql-g6.png)
 
@@ -462,8 +461,10 @@ In this exercise, we test the deployed AKS application by ensuring it is running
 1. Open a web browser to the external IP address of your service to see the Azure Store app in action.
 
       ![](../images/aks-output1.png)
+      
+      >**Note:** Browse to the external IP using **http://**, not **https://**.
 
-> Result: You have deployed an Azure Kubernetes Cluster
+      >Result: You have deployed an Azure Kubernetes Cluster
 
 ## Review
 In this lab, you will complete the following tasks:
